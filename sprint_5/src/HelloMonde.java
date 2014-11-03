@@ -8,6 +8,7 @@ public class HelloMonde {
 	     System.out.println("[DUT/INFO/S3]");
 	     System.out.println("Hello Monde !");
 	     System.out.println("depuis Blagnac.");
+	     System.out.println("YoloSwag");
 	}
 
 }
