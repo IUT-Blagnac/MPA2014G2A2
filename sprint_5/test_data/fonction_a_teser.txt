@@ -1,0 +1,7 @@
+FONCTION A TESTER :
+
+	
+
+	positionSujetGroupe
+
+	voeuxSujetClassés

@@ -1,0 +1,325 @@
+﻿= Documentation 3
+:Author:  Groupe projet 2A2
+:doctitle: Documentation Technique du Projet OPTI au Sprint4
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: 0.23
+
+include::docConf.txt[]
+
+== Liste des membres
+
+- PERE Jean-Philippe
+- SANTACANA Nathan
+- LOPEZ Nathan
+- ERB Alexandre
+- COLIGNON Benjamin
+- VERON Vimel
+
+
+ DUT INFO S3/Module MPA
+
+ 
+ 
+== Backlog du produit OPTI en début de Projet
+ 
+Application de gestion de projets tutorés informatiques permettant :
+
+- de gérer tous les acteurs intervenant dans les projets
+- de gérer l’affectation semi-automatique des projets aux groupes étudiants
+- de gérer la publication des informations destinées aux différents intervenants et aux progiciels institutionnels
+- de gérer l'évaluation de chaque projet
+ 
+ 
+== Fonctionnalitées disponibles en fin de Sprint4 : 
+
+
+- pouvoir afficher la liste des étudiants du fichier etudiants2014_2015.csv dans l’IHM . 
+
+- pouvoir afficher la liste des intervenants du fichier intervenants2014_2015.csv dans l’IHM .
+
+- pouvoir afficher la liste des sujets du fichier sujets2014_2015.csv dans l’IHM .
+
+- pouvoir afficher la liste des projets du fichier projets2014_2015.csv dans l’IHM .
+
+- pouvoir afficher la liste des étudiants ou des intervenants ou des sujets ou des projets d’un fichier .csv dans l’IHM, en supprimer certains puis l’enregistrer dans un fichier .csv de mon choix .
+
+- pouvoir afficher la liste des étudiants puis ajouter un nouvel étudiant et sauvegarder la liste des étudiants dans un fichier .csv de mon choix .
+
+- pouvoir afficher la liste des intervenants puis ajouter un nouvel intervenant et sauvegarder la liste des intervenants dans un fichier .csv de mon choix .
+
+- pouvoir afficher la liste des sujets puis ajouter un nouveau sujet et sauvegarder la liste des projets dans un fichier .csv de mon choix .
+
+- pouvoir afficher la liste des projets puis ajouter un nouveau projet et sauvegarder la liste des projets dans un fichier .csv de mon choix .
+
+- pouvoir afficher la liste des projets puis cloner n’importe quel projet, l'éditer et sauvegarder la liste des projets dans un fichier .csv de mon choix .
+
+- une fois la liste des étudiants ou des intervenants ou des sujets ou des projets ou des voeux affichés dans l’IHM, pouvoir sélectionner (filtrer) les éléments affichés sur chacun des champs du fichier .csv correspondant .
+
+- pouvoir afficher la liste des groupes indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet dans l’IHM - priorité métier 8
+
+- pouvoir afficher la liste des étudiants indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet dans l’IHM - priorité métier 8
+
+- pouvoir afficher dans l’IHM la liste des intervenants indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet - priorité métier 8
+
+- pouvoir afficher dans l'IHM la liste des voeux, puis en ajouter ou supprimer
+
+- pouvoir sélectionner un numéro de voeux X et afficher tous les sujets sélectionnés en voeux numéro X
+
+- pouvoir pour tous les sujets, voir combien de groupes l’ont choisi en voeux 1, combien de groupes l’ont choisi en voeux 2, …, combien de groupe l’ont choisi en voeux nombreDeSujets mais sans compter les groupes ayant déjà un projet (sujet affecté)
+
+- pouvoir afficher la liste des groupes avec pour chaque groupe le sujet qui leur est affecté (s’il existe) et le numéro de voeux correspondant, ainsi que les intervenants affectés s’il y en a (superviseur, support technique ou rapporteur)
+
+- pouvoir sélectionner un sujet et un groupe pour créer un nouveau projet
+
+- pouvoir pré-affecter les groupes aux sujets en minimisant le rang du voeu choisi pour chaque groupe
+
+- pouvoir affecter tout intervenant à un projet et lui assigner un rôle (superviseur, support technique ou rapporteur) dans le projet
+
+- Possibilité pour un intervenant d'encadrer un projet
+
+
+ 
+== Les differentes classes JAVA de l'application OPTI au sprint4
+
+Controleur :
+- link:{src}/Controleur/Controleur.java[Controleur]
+- link:{src}/Controleur/OptiMain.java[OptiMain]
+- link:{src}/Controleur/ComparateurDeVoeux.java[ComparateurDeVoeux]
+
+Interface :
+- link:{src}/Interface/A_propos.java[A_Propos] 
+- link:{src}/Interface/AffichageEtu.java[AffichageEtu]
+- link:{src}/Interface/AffichageInt.java[AffichageInt]
+- link:{src}/Interface/AffichageProj.java[AffichageProj]
+- link:{src}/Interface/AffichageSuj.java[AffichageSuj]
+- link:{src}/Interface/AffichageGroupe.java[AffichageGroupe]
+- link:{src}/Interface/AffichageVoeux.java[AffichageVoeux]
+- link:{src}/Interface/Enregistrement.java[Enregistrement]
+- link:{src}/Interface/FenetrePrincipale.java[FenetrePrincipale] 
+- link:{src}/Interface/OuvrirEnregistrer.java[OuvrirEnregistrer]
+- link:{src}/Interface/Recherche.java[Recherche]
+
+
+Librairie :               
+- link:{src}/Lib/Optilib.java[Optilib]
+
+
+Modèles :
+- link:{src}/Modele/Etudiants.java[Etudiants]
+- link:{src}/Modele/Intervenants.java[Intervenants]
+- link:{src}/Modele/Projets.java[Projets]
+- link:{src}/Modele/Sujets.java[Sujets]
+- link:{src}/Modele/Voeux.java[Voeux]
+
+Tests : 
+- link:{src}/Test/TestsControleur.java[TestsControleur]
+- link:{src}/Test/TestsOptilib.java[TestsOptilib]
+- link:{src}/Test/TestDoc.java[TestDoc]
+
+
+[NOTE]
+====
+Les fichiers .java sont contenus dans le dossier src
+====
+
+
+
+
+== Les explication des classes JAVA de l'application OPTI au sprint3
+
+- link:{src}/Lib/Optilib.java[Optilib]
+
+- link:{src}/Interface/FenetrePrincipale.java[FenetrePrincipale] :
+
+image::FenetrePrincipale.jpg[]
+
+[NOTE]
+====
+La fenetre Opti possede Un JMenuBar avec 2 JMenu :
+
+- Fichier avec 4 JMenuItem permettant de quitter l'application, ouvrir un csv, enregistrer ou d'enregistrer sous
+- Aide avec un JMenuItem A Propos permettant d'obtenir des informations sur l'application.
+
+La fenetre possède un JTabbedPanel dans lequel on ajoute :
+
+- 5 JPanel (Sujets, Projets, Etuidants, Intervenants, Voeux)
+
+Selon les onglets sont presents les JButtons Ajouter/Modifier/supprimer/Rechercher/Supprimer la Recherche/cloner pour projets.
+====
+
+
+
+
+- link:{src}/Interface/Enregistrement.java[Enregistrement]
+
+image::enregistrer.jpg[]
+
+
+[NOTE]
+====
+La fenetre possede 4 JLabel associés à 4 JtextField et à 4JButtons.
+Un JButton enregistrer est également présent.
+
+====
+
+
+
+- link:{src}/Interface/OuvrirEnregistrer.java[OuvrirEnregistrer]
+
+image::explorer.jpg[]
+
+
+[NOTE]
+====
+La fenetre possede 4 JLabel associés à 4 JtextField et à 4JButtons.
+Un JButton Ouvrir est cette fois ci present.
+====
+
+
+
+
+- link:{src}/Modele/Sujets.java[Sujets] 
+- link:{src}/Interface/AffichageSuj.java[AffichageSuj] 
+
+image::FenetrePrincipale.jpg[]
+
+L'onglet Sujet possède une liste de JButton situé à gauche de l'interface permettant la seletion des sujets.
+Un affichage directe se fait au centre de l'interface à l'aide de JTable.
+Un certains nombre de JButton sont disposés en FlowLayout en bas de l'interface.
+
+[NOTE]
+====
+Sujets permet de definir le type de données a retourner
+AffichageSuj permet de faire l'affichage
+====
+
+
+- link:{src}/Interface/AffichageProj.java[AffichageProj]
+- link:{src}/Modele/Projets.java[Projets] 
+
+image::ProjetsAffichage.jpg[]
+
+L'onglet Projets possède un JTable permettant l'affichage directes des données.
+Un certains nombre de JButton sont disposés en FlowLayout en bas de l'interface.
+
+[NOTE]
+====
+Projets permet de definir le type de données a retourner
+AffichageProj permet de faire l'affichage
+====
+
+- link:{src}/Interface/AffichageEtu.java[AffichageEtu] 
+- link:{src}/Modele/Etudiants.java[Etudiants] 
+
+image::Affichage.png[]
+
+L'onglet Etudiants possède un JTable permettant l'affichage directes des données.
+Un certains nombre de JButton sont disposés en FlowLayout en bas de l'interface.
+
+[NOTE]
+====
+Etudiants permet de definir le type de données a retourner
+AffichageEtu permet de faire l'affichage
+====
+
+
+- link:{src}/Modele/Intervenants.java[Intervenants]
+- link:{src}/Interface/AffichageInt.java[AffichageInt]
+
+image::IntervenantsAffichage.png[]
+
+L'onglet Intervenants possède une liste de JButton situé à gauche de l'interface permettant la seletion des sujets.
+Un affichage directe se fait au centre de l'interface à l'aide de JTable.
+Un certains nombre de JButton sont disposés en FlowLayout en bas de l'interface.
+
+[NOTE]
+====
+Intervenants permet de definir le type de données a retourner
+AffichageInt permet de faire l'affichage
+====
+
+- link:{src}/Interface/AffichageGroupe.java[AffichageGroupe]
+
+image::AffichageGroup.png[]
+
+L'onglet Groupe possède une liste de JButton situé à gauche de l'interface permettant la seletion des sujets.
+Un affichage directe se fait au centre de l'interface à l'aide de JTable.
+
+- link:{src}/Interface/AffichageVoeux.java[AffichageVoeux]
+
+image::AffichageVoeux.jpg[]
+
+L'onglet Voeux possède un JTable permettant l'affichage directes des données.
+Un certains nombre de JButton sont disposés en FlowLayout en bas de l'interface.
+
+- link:{src}/Interface/Recherche.java[Recherche]
+
+image::recherche.jpg[]
+
+[NOTE]
+====
+Interface composée :
+
+- d'une JComboBox contenant les attributs du type de l'objet que l'on traite(ici les attributs de sujet).
+- 1 JLabel permettant l'affichage de Mot à rechercher
+- 1 JTextField permettant de remplir la recherche par mot clé.
+- 1JButton permettant de valider la recherche.
+====
+
+- link:{src}/Interface/A_propos.java[A_Propos] :
+
+image::A_Propos.jpg[]
+
+
+
+
+[NOTE]
+====
+La fenetre A Propos donne des informations sur le projet.
+Elle contient un certain nombre de JLabel permettant l'affichage des informations.
+====
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Diagrammes UML
+
+Diagramme de classe metier :
+
+image::UML0.jpg[]
+
+Diagramme de Cas d'utilisation pour l'admnistrateur :
+
+image::UML1.jpg[]
+
+Seconde partie du use case :
+
+imahe::UML2.jpg[]
+ 
+
+ 
+
+image::univ_toulouse_le_mirail.gif[width="8%"]
+
+- link:{src}/Interface/TrollDuVendredi.java[ ]

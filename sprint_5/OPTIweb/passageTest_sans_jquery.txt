@@ -1,0 +1,28 @@
+Page d'accueil :
+
+-Affiche bien : "title = OPTIweb - V0.1"
+
+-"Crédits" sous  #accueil div a
+
+- 'h1 = "Sujets 2014-2015"'
+
+- 'form input#autocomplete-input-sujet'
+
+-'ol#listesujets'
+
+-Verifie que les sujets s'affichent dans le bon ordre
+
+-'h4 = "OPTIweb Version 0.1"'
+
+-
+
+Les divs des sous pages 
+
+formulaires de saisies et champs de recherche ait un name
+
+les listes soient du ol ul li
+
+que les li possèdent la même structures (sans doutes)
+
+un champs data_find
+
