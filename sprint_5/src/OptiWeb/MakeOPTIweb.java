@@ -146,7 +146,7 @@ public class MakeOPTIweb {
 							"<li class=\"liste_titre\">Propulse par</li>\n" +
 							"<li>Nathan LOPEZ's brain</li>\n" +
 							"<li>NEVER Jquery</li>\n" +
-							"<li>Notre application contient 34161 caracteres, la même application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus legere. Notre application ne necessite pas de connexion internet.</li>\n" +
+							"<li>Notre application contient 34161 caracteres, la meme application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus legere. Notre application ne necessite pas de connexion internet.</li>\n" +
 							"</ul>\n"
 							);
 				
