@@ -37,11 +37,11 @@ script:
   - javac -d %BINDIR% %SRCDIR%/Modele/Intervenants.java
   - javac -d %BINDIR% %SRCDIR%/Modele/Voeux.java
  
-  - @echo /***** Compilation d'optilib *****/
+  - echo /***** Compilation d'optilib *****/
  
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Lib/Optilib.java
  
-  - @echo /***** Compilation de l'interface *****/
+  - echo /***** Compilation de l'interface *****/
  
   - javac -d %BINDIR% %SRCDIR%/Interface/A_propos.java
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageEtu.java
