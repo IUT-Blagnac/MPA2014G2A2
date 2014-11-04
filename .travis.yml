@@ -12,6 +12,8 @@ script:
   - SRCDIR=./src/
   - BINDIR=./bin/
 
+  - find $SRCDIR/* -type f -name *.java | xargs sed -i "s/é/e/g"
+  
   - echo /***** Compilation du modele *****/
   
   - javac -d $BINDIR $SRCDIR/Modele/Sujets.java
