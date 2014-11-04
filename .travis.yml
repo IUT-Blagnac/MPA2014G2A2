@@ -22,28 +22,28 @@ script:
  
   - echo /***** Compilation doptilib *****/
  
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Lib/Optilib.java
+  - javac -d $BINDIR $SRCDIR/Lib/Optilib.java
  
   - echo /***** Compilation de linterface *****/
  
   - javac -d $BINDIR $SRCDIR/Interface/A_propos.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageEtu.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageInt.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageProj.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageSuj.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageGroupe.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/Enregistrement.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/OuvrirEnregistrer.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/Recherche.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/FenetrePrincipale.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageEtu.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageInt.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageProj.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageSuj.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageGroupe.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
+  - javac -d $BINDIR $SRCDIR/Interface/Enregistrement.java
+  - javac -d $BINDIR $SRCDIR/Interface/OuvrirEnregistrer.java
+  - javac -d $BINDIR $SRCDIR/Interface/Recherche.java
+  - javac -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
+  - javac -d $BINDIR $SRCDIR/Interface/FenetrePrincipale.java
   
   - echo /***** Compilation du controleur *****/
   
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/Controleur.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
-  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/OptiMain.java
+  - javac -d $BINDIR $SRCDIR/Controleur/Controleur.java
+  - javac -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
+  - javac -d $BINDIR $SRCDIR/Controleur/OptiMain.java
 
   - echo /***** Compilation des tests *****/
  
