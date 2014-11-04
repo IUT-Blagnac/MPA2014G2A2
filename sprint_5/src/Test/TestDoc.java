@@ -21,7 +21,7 @@ import java.util.regex.*;
 import javax.swing.JFileChooser;
 
 /**
- * Lire les propriétés d'un fichier
+ * Lire les proprietes d'un fichier
  * @author Fobec 2010
  */
 public class TestDoc {
@@ -56,7 +56,7 @@ public class TestDoc {
 
     /**
      * Taille du fichier
-     * @return unité byte
+     * @return unite byte
      */
     public Long getSize() {
         return this.file.length();
@@ -101,7 +101,7 @@ public class TestDoc {
     
     
     public static void listerRepertoire(File repertoire){ 
-    	//Permet de lister toutes les images d'un répertoire
+    	//Permet de lister toutes les images d'un repertoire
     	String [] listefichiers; 
 
     	int i; 
@@ -116,7 +116,7 @@ public class TestDoc {
     
     
     public static boolean listerRepertoireJava(String nom,File repertoire,ArrayList<String> tableau){ 
-    	//Permet de lister tous les .java d'un répertoire 
+    	//Permet de lister tous les .java d'un repertoire 
     	boolean coucou=false;
     	String [] listefichiers; 
     	//String [] listefichiersInterface; 
@@ -145,7 +145,7 @@ public class TestDoc {
     
     
     public static void afficherDateRepertoire(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un répertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -175,7 +175,7 @@ public class TestDoc {
     }
     
     public static void afficherDateRepertoireDocTxt(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un répertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -205,7 +205,7 @@ public class TestDoc {
     }
     
     public static void afficherDateRepertoireDocHtml(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un répertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -236,7 +236,7 @@ public class TestDoc {
     
     
     public static void verifierDateRepertoire(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un répertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -298,7 +298,7 @@ public class TestDoc {
 
 
     /**
-     * Exemple de propriété du fichier monimage.bmp
+     * Exemple de propriete du fichier monimage.bmp
      * @param args
      */
     public static void main(String[] args) {
@@ -308,7 +308,7 @@ public class TestDoc {
         //FileProperty fileProperty = new FileProperty(file);
         //FileProperty fileProperty1 = new FileProperty(file);
         /*
-        System.out.println("Propriété du fichier: " + file);
+        System.out.println("Propriete du fichier: " + file);
         System.out.println("Date: " + fileProperty.getFormatedDate());
         System.out.println("Taille: " + fileProperty.getFormatedSize());
         System.out.println("Type: " + fileProperty.getType());
@@ -324,7 +324,7 @@ public class TestDoc {
 	    
     String curDir = System.getProperty("user.dir");
     System.out.println ("Bienvenue dans le programme de Test de la Documentation ! \n \n ");
-    //System.out.println ("Le répertoire courant est: "+curDir +"\n");
+    //System.out.println ("Le repertoire courant est: "+curDir +"\n");
     
     
     
@@ -398,7 +398,7 @@ public class TestDoc {
     
     
     System.out.println("\n");
-	System.out.println("Liste des images et leur dernière modification contenus dans le dossier situé à : " +dossier +"\n");	
+	System.out.println("Liste des images et leur dernière modification contenus dans le dossier situe à : " +dossier +"\n");	
 	
 	
 	int i =0;
@@ -618,7 +618,7 @@ public class TestDoc {
     
     
     
-   System.out.println(" \n \n" +"Verification de la présence de tous les fichiers java dans la doc : \n"); 
+   System.out.println(" \n \n" +"Verification de la presence de tous les fichiers java dans la doc : \n"); 
    
    
    

@@ -33,10 +33,10 @@ public class AffichageGroupe {
 	private static JPanel EtuTable;
 	
 	/**
-	 * Permet de créer un JPanel comportant des infos sur les groupes et l'accès aux différentes fonctionalités sur les groupes.
-	 * @param fenêtre La fenetre mère du JPannel qui sera retourné.
+	 * Permet de creer un JPanel comportant des infos sur les groupes et l'accès aux differentes fonctionalites sur les groupes.
+	 * @param fenêtre La fenetre mère du JPannel qui sera retourne.
 	 * @param listeGroupe Le tableau de String comportant les infos sur les groupes.
-	 * @return Le JPanel comportant des infos sur les groupes et l'accès aux différentes fonctionalités sur les groupes.
+	 * @return Le JPanel comportant des infos sur les groupes et l'accès aux differentes fonctionalites sur les groupes.
 	 */
 	public static JPanel affiJPanel(JFrame fenêtre, final String[][] listeGroupe) {
 
@@ -162,7 +162,7 @@ public class AffichageGroupe {
 		petitCentre.setLayout(new GridLayout(1, 2));
 
 		sujet.setBackground(new Color(200,221,242));
-		labelsujet = new JLabel("Sélectionnez un groupe");
+		labelsujet = new JLabel("Selectionnez un groupe");
 		labelsujet.setFont(new Font("Arial", Font.PLAIN, 16));
 		sujet.add(labelsujet);
 		
@@ -177,8 +177,8 @@ public class AffichageGroupe {
 	
 	
 	/**
-	 * Permet d'obtenir Le tableau de JButton qui contient les différents groupes.
-	 * @return Le tableau de JButton qui contient les différents groupes.
+	 * Permet d'obtenir Le tableau de JButton qui contient les differents groupes.
+	 * @return Le tableau de JButton qui contient les differents groupes.
 	 */
 	public static JButton[] getJBouton(){
 		return bouton;
@@ -186,15 +186,15 @@ public class AffichageGroupe {
 	
 	
 	/**
-	 * Restreind l'affichage des autres données en fonction du groupe
-	 * @param nom Le nom du groupe selectionné.
-	 * @param sujet Le sujet du groupe selectionné. 
+	 * Restreind l'affichage des autres donnees en fonction du groupe
+	 * @param nom Le nom du groupe selectionne.
+	 * @param sujet Le sujet du groupe selectionne. 
 	 */
 	public static void select_groupe(String nom, String sujet) {
 		
 		String numVoeu = Controleur.positionSujetGroupe(nom);
 		if(numVoeu != "") {
-			labelsujet.setText(sujet + " (voeu numéro " + numVoeu + ")");
+			labelsujet.setText(sujet + " (voeu numero " + numVoeu + ")");
 		} else {
 			labelsujet.setText(sujet);
 		}
@@ -209,7 +209,7 @@ public class AffichageGroupe {
 		String temp="";
 		for(int i=0;i<etu.size();i++){
 			for(int j=0;j<entetes.length;j++){
-				temp = etu.get(i).getDonnées().get(entetes[j]);
+				temp = etu.get(i).getDonnees().get(entetes[j]);
 				etuData[i][j] = temp;
 			}
 		}
@@ -229,7 +229,7 @@ public class AffichageGroupe {
 		for(int i=0;i<3;i++){
 			for(int j=0;j<entetes2.length-1;j++){
 				if(inte[i] != "") {
-					temp=Controleur.findIntervenant(inte[i]).getDonnées().get(entetes2[j]);
+					temp=Controleur.findIntervenant(inte[i]).getDonnees().get(entetes2[j]);
 					inteData[i][j] = temp;
 				} else {
 					inteData[i][j] = "";

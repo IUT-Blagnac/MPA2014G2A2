@@ -43,32 +43,32 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/test.csv");
+		Controleur.entres.put("Etudiants", "test_data/test.csv");
 		Controleur.importer();
 
 		if (Controleur.getEtudiants().size() == 1) {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne récupère pas tous les enregistrements");
+					.println("Erreur : Importer ne recupère pas tous les enregistrements");
 		}
 
-		if (Controleur.getEtudiants().get(0).getDonnées().get("nom")
+		if (Controleur.getEtudiants().get(0).getDonnees().get("nom")
 				.equals("Val2")) {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne récupère pas les bonnes valeurs");
+					.println("Erreur : Importer ne recupère pas les bonnes valeurs");
 		}
 
-		Controleur.entrés.put("Etudiants", "test_data/test2.csv");
+		Controleur.entres.put("Etudiants", "test_data/test2.csv");
 		Controleur.importer();
 
 		if (Controleur.getEtudiants().size() == 71) {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne récupère pas tous les enregistrements");
+					.println("Erreur : Importer ne recupère pas tous les enregistrements");
 		}
 
 	}
@@ -88,16 +88,16 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testSuppSujet.csv");
+		Controleur.entres.put("Sujets", "test_data/testSuppSujet.csv");
 		Controleur.importer();
 			
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "Val0");
-		données.put("nom", "Val1");
-		données.put("titre", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "Val0");
+		donnees.put("nom", "Val1");
+		donnees.put("titre", "Val2");
 		
 		ArrayList<Sujets>ListSujet = Controleur.getSujets();
-		Sujets S = new Sujets(données);
+		Sujets S = new Sujets(donnees);
 		
 		ListSujet.add(S);
 		Controleur.supprimerSujet(S);
@@ -121,15 +121,15 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testSuppProjets.csv");
+		Controleur.entres.put("Projets", "test_data/testSuppProjets.csv");
 		Controleur.importer();
 			
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val0");
-		données.put("sujet", "Val1");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val0");
+		donnees.put("sujet", "Val1");
 		
 		ArrayList<Projets>ListProjets = Controleur.getProjets();
-		Projets P = new Projets(données);
+		Projets P = new Projets(donnees);
 		
 		ListProjets.add(P);
 		Controleur.supprimerProjet(P);
@@ -153,15 +153,15 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Intervenants", "test_data/testSuppIntervenants.csv");
+		Controleur.entres.put("Intervenants", "test_data/testSuppIntervenants.csv");
 		Controleur.importer();
 			
-		Hashtable<String, String> données = new Hashtable();
-		données.put("nom", "prenom");
-		données.put("sujet", "Val1");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("nom", "prenom");
+		donnees.put("sujet", "Val1");
 		
 		ArrayList<Intervenants>ListIntervenants = Controleur.getIntervenants();
-		Intervenants P = new Intervenants(données);
+		Intervenants P = new Intervenants(donnees);
 		
 		ListIntervenants.add(P);
 		Controleur.supprimerIntervenant(P);
@@ -185,16 +185,16 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/testSuppEtudiants.csv");
+		Controleur.entres.put("Etudiants", "test_data/testSuppEtudiants.csv");
 		Controleur.importer();
 			
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "val0");
-		données.put("nom", "Val1");
-		données.put("prenom", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "val0");
+		donnees.put("nom", "Val1");
+		donnees.put("prenom", "Val2");
 		
 		ArrayList<Etudiants>ListEtudiants = Controleur.getEtudiants();
-		Etudiants P = new Etudiants(données);
+		Etudiants P = new Etudiants(donnees);
 		
 		ListEtudiants.add(P);
 		Controleur.supprimerEtudiant(P);
@@ -212,19 +212,19 @@ public class TestsControleur extends TestCase {
 		nbTestsTotal++;
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testAjouSujet.csv");
+		Controleur.entres.put("Sujets", "test_data/testAjouSujet.csv");
 		Controleur.importer();
 			
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "Val0");
-		données.put("nom", "Val1");
-		données.put("titre", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "Val0");
+		donnees.put("nom", "Val1");
+		donnees.put("titre", "Val2");
 		
 		ArrayList<Sujets>ListSujet = Controleur.getSujets();
-		Sujets S = new Sujets(données);
+		Sujets S = new Sujets(donnees);
 		
 		
-		Controleur.ajouterSujet(données);
+		Controleur.ajouterSujet(donnees);
 		if(Controleur.getSujets().size()==1){
 			nbTestsOk++;
 		}else{
@@ -235,33 +235,33 @@ public class TestsControleur extends TestCase {
 	public void test_ajout_Etudiant() {
 		nbTestsTotal++;
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/testAjouEtudiants.csv");
+		Controleur.entres.put("Etudiants", "test_data/testAjouEtudiants.csv");
 		Controleur.importer();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "val0");
-		données.put("nom", "Val1");
-		données.put("prenom", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "val0");
+		donnees.put("nom", "Val1");
+		donnees.put("prenom", "Val2");
 		ArrayList<Etudiants>listEtudiants = Controleur.getEtudiants();
-		Etudiants E = new Etudiants(données);
-		Controleur.ajouterEtudiant(données);
+		Etudiants E = new Etudiants(donnees);
+		Controleur.ajouterEtudiant(donnees);
 		if(Controleur.getEtudiants().size()==1){
 			nbTestsOk++;
 		}else{
 			System.err
-			.println("Erreur : ajouterEtudiants n'ajoute pas léétudiant");
+			.println("Erreur : ajouterEtudiants n'ajoute pas leetudiant");
 		}
 	}
 	public void test_ajout_Proget() {
 		nbTestsTotal++;
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testAjoutProjets.csv");
+		Controleur.entres.put("Projets", "test_data/testAjoutProjets.csv");
 		Controleur.importer();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "val0");
-		données.put("sujet", "Val1");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "val0");
+		donnees.put("sujet", "Val1");
 		ArrayList<Projets>listIntervenants = Controleur.getProjets();
-		Projets I = new Projets(données);
-		Controleur.ajouterProjet(données);
+		Projets I = new Projets(donnees);
+		Controleur.ajouterProjet(donnees);
 		if(Controleur.getProjets().size()==1){
 			nbTestsOk++;
 		}else{
@@ -272,15 +272,15 @@ public class TestsControleur extends TestCase {
 	public void test_ajout_Intervenant() {
 		nbTestsTotal++;
 		Controleur.initCsv();
-		Controleur.entrés.put("Intervenants", "test_data/testAjouIntervenants.csv");
+		Controleur.entres.put("Intervenants", "test_data/testAjouIntervenants.csv");
 		Controleur.importer();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "val0");
-		données.put("nom", "Val1");
-		données.put("prenom", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "val0");
+		donnees.put("nom", "Val1");
+		donnees.put("prenom", "Val2");
 		ArrayList<Intervenants>listIntervenants = Controleur.getIntervenants();
-		Intervenants I = new Intervenants(données);
-		Controleur.ajouterIntervenant(données);
+		Intervenants I = new Intervenants(donnees);
+		Controleur.ajouterIntervenant(donnees);
 		if(Controleur.getIntervenants().size()==1){
 			nbTestsOk++;
 		}else{
@@ -304,22 +304,22 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/testGetEtu.csv");
+		Controleur.entres.put("Etudiants", "test_data/testGetEtu.csv");
 		Controleur.importer();
 			
 		ArrayList<Etudiants>ListEtu_Fichier = Controleur.getEtudiants();
 		ArrayList<Etudiants> ListEtu = new ArrayList<Etudiants>();
 		
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val1");
-		données.put("nom", "Val2");
-		données.put("prenom", "Val3");
-		Etudiants E = new Etudiants(données);
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val1");
+		donnees.put("nom", "Val2");
+		donnees.put("prenom", "Val3");
+		Etudiants E = new Etudiants(donnees);
 		ListEtu.add(E);
 		
-		if(ListEtu.get(0).getDonnées().get("groupe").equals(ListEtu_Fichier.get(0).getDonnées().get("groupe")) && 
-				(ListEtu.get(0).getDonnées().get("nom").equals(ListEtu_Fichier.get(0).getDonnées().get("nom")) &&
-						(ListEtu.get(0).getDonnées().get("prenom").equals(ListEtu_Fichier.get(0).getDonnées().get("prenom")) ))){
+		if(ListEtu.get(0).getDonnees().get("groupe").equals(ListEtu_Fichier.get(0).getDonnees().get("groupe")) && 
+				(ListEtu.get(0).getDonnees().get("nom").equals(ListEtu_Fichier.get(0).getDonnees().get("nom")) &&
+						(ListEtu.get(0).getDonnees().get("prenom").equals(ListEtu_Fichier.get(0).getDonnees().get("prenom")) ))){
 			nbTestsOk++;
 			
 		}else{
@@ -339,19 +339,19 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testGetSuj.csv");
+		Controleur.entres.put("Sujets", "test_data/testGetSuj.csv");
 		Controleur.importer();
 		ArrayList<Sujets>ListSuj_Fichier = Controleur.getSujets();
 		ArrayList<Sujets> ListSuj = new ArrayList<Sujets>();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "1");
-		données.put("nom", "Val2");
-		données.put("titre", "Val3");
-		Sujets S = new Sujets(données);
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "1");
+		donnees.put("nom", "Val2");
+		donnees.put("titre", "Val3");
+		Sujets S = new Sujets(donnees);
 		ListSuj.add(S);
-		if(ListSuj.get(0).getDonnées().get("id").equals(ListSuj_Fichier.get(0).getDonnées().get("id") )&&
-				(ListSuj.get(0).getDonnées().get("nom").equals(ListSuj_Fichier.get(0).getDonnées().get("nom")) &&
-						(ListSuj.get(0).getDonnées().get("titre").equals(ListSuj_Fichier.get(0).getDonnées().get("titre")) ))){
+		if(ListSuj.get(0).getDonnees().get("id").equals(ListSuj_Fichier.get(0).getDonnees().get("id") )&&
+				(ListSuj.get(0).getDonnees().get("nom").equals(ListSuj_Fichier.get(0).getDonnees().get("nom")) &&
+						(ListSuj.get(0).getDonnees().get("titre").equals(ListSuj_Fichier.get(0).getDonnees().get("titre")) ))){
 			nbTestsOk++;
 		}else{
 			System.err
@@ -370,18 +370,18 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/test_getProjets.csv");
+		Controleur.entres.put("Projets", "test_data/test_getProjets.csv");
 		Controleur.importer();
 		ArrayList<Projets>ListPro_Fichier = Controleur.getProjets();
 		ArrayList<Projets> ListPro = new ArrayList<Projets>();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val0");
-		données.put("sujet", "1");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val0");
+		donnees.put("sujet", "1");
 
-		Projets P = new Projets(données);
+		Projets P = new Projets(donnees);
 		ListPro.add(P);
-		if(ListPro.get(0).getDonnées().get("groupe").equals(ListPro_Fichier.get(0).getDonnées().get("groupe") )&&
-				(ListPro.get(0).getDonnées().get("sujet").equals(ListPro_Fichier.get(0).getDonnées().get("sujet"))
+		if(ListPro.get(0).getDonnees().get("groupe").equals(ListPro_Fichier.get(0).getDonnees().get("groupe") )&&
+				(ListPro.get(0).getDonnees().get("sujet").equals(ListPro_Fichier.get(0).getDonnees().get("sujet"))
 			)){
 			nbTestsOk++;
 		}else{
@@ -401,18 +401,18 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Intervenants", "test_data/test_getIntervenants.csv");
+		Controleur.entres.put("Intervenants", "test_data/test_getIntervenants.csv");
 		Controleur.importer();
 		ArrayList<Intervenants>ListInt_Fichier = Controleur.getIntervenants();
 		ArrayList<Intervenants> ListInt = new ArrayList<Intervenants>();
-		Hashtable<String, String> données = new Hashtable();
-		données.put("nom", "Val0");
-		données.put("prenom", "Val1");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("nom", "Val0");
+		donnees.put("prenom", "Val1");
 
-		Intervenants I = new Intervenants(données);
+		Intervenants I = new Intervenants(donnees);
 		ListInt.add(I);
-		if(ListInt.get(0).getDonnées().get("nom").equals(ListInt_Fichier.get(0).getDonnées().get("nom") )&&
-				(ListInt.get(0).getDonnées().get("prenom").equals(ListInt_Fichier.get(0).getDonnées().get("prenom"))
+		if(ListInt.get(0).getDonnees().get("nom").equals(ListInt_Fichier.get(0).getDonnees().get("nom") )&&
+				(ListInt.get(0).getDonnees().get("prenom").equals(ListInt_Fichier.get(0).getDonnees().get("prenom"))
 			)){
 			nbTestsOk++;
 		}else{
@@ -536,29 +536,29 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testModifSujet.csv");
+		Controleur.entres.put("Sujets", "test_data/testModifSujet.csv");
 		Controleur.importer();
 
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "Val3");
-		données.put("nom", "Val4");
-		données.put("titre", "Val5");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "Val3");
+		donnees.put("nom", "Val4");
+		donnees.put("titre", "Val5");
 		
-		Controleur.modifierSujet(Controleur.getSujets().get(0), données);
+		Controleur.modifierSujet(Controleur.getSujets().get(0), donnees);
 		
 		String []tab_attribut=Controleur.attributSujet();
 		
-		String[] tabValModif= new String[données.size()];
+		String[] tabValModif= new String[donnees.size()];
 		
-		//creation automatique du tableau contenant les donnée modifié
+		//creation automatique du tableau contenant les donnee modifie
 		for(int i=0;i<tabValModif.length;i++){
-			tabValModif[i]=données.get(tab_attribut[i]);
+			tabValModif[i]=donnees.get(tab_attribut[i]);
 		}
 		
 		boolean ok=true;
 		int i=0;
 		while(i<tab_attribut.length && ok){
-			if(! Controleur.getSujets().get(0).getDonnées().get(tab_attribut[i]).equals(tabValModif[i])){
+			if(! Controleur.getSujets().get(0).getDonnees().get(tab_attribut[i]).equals(tabValModif[i])){
 				ok=false;
 			}
 			i++;
@@ -582,27 +582,27 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/testModifEtu.csv");
+		Controleur.entres.put("Etudiants", "test_data/testModifEtu.csv");
 		Controleur.importer();
 
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val3");
-		données.put("nom", "Val4");
-		données.put("prenom", "Val5");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val3");
+		donnees.put("nom", "Val4");
+		donnees.put("prenom", "Val5");
 		
-		Controleur.modifierEtudiant(Controleur.getEtudiants().get(0), données);
+		Controleur.modifierEtudiant(Controleur.getEtudiants().get(0), donnees);
 		
 		String []tab_attribut=Controleur.attributEtudiant();
 	
 
-		String[] tabValModif= new String[données.size()];
+		String[] tabValModif= new String[donnees.size()];
 		for(int i=0;i<tabValModif.length;i++){
-			tabValModif[i]=données.get(tab_attribut[i]);
+			tabValModif[i]=donnees.get(tab_attribut[i]);
 		}
 		boolean ok=true;
 		int i=0;
 		while(i<tab_attribut.length && ok){
-			if(! Controleur.getEtudiants().get(0).getDonnées().get(tab_attribut[i]).equals(tabValModif[i])){
+			if(! Controleur.getEtudiants().get(0).getDonnees().get(tab_attribut[i]).equals(tabValModif[i])){
 				ok=false;
 			}
 			i++;
@@ -626,26 +626,26 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testModifproj.csv");
+		Controleur.entres.put("Projets", "test_data/testModifproj.csv");
 		Controleur.importer();
 
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val2");
-		données.put("sujet", "Val3");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val2");
+		donnees.put("sujet", "Val3");
 		
 		
-		Controleur.modifierProjet(Controleur.getProjets().get(0), données);
+		Controleur.modifierProjet(Controleur.getProjets().get(0), donnees);
 		
 		String []tab_attribut={"groupe","sujet"};
-		String[] tabValModif= new String[données.size()];
+		String[] tabValModif= new String[donnees.size()];
 		for(int i=0;i<tabValModif.length;i++){
-			tabValModif[i]=données.get(tab_attribut[i]);
+			tabValModif[i]=donnees.get(tab_attribut[i]);
 		}
 		
 		boolean ok=true;
 		int i=0;
 		while(i<tab_attribut.length && ok){
-			if(! Controleur.getProjets().get(0).getDonnées().get(tab_attribut[i]).equals(tabValModif[i])){
+			if(! Controleur.getProjets().get(0).getDonnees().get(tab_attribut[i]).equals(tabValModif[i])){
 				ok=false;
 			}
 			i++;
@@ -670,27 +670,27 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Intervenants", "test_data/testModifInt.csv");
+		Controleur.entres.put("Intervenants", "test_data/testModifInt.csv");
 		Controleur.importer();
 
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "2");
-		données.put("nom", "CHANCOGNE");
-		données.put("prenom", "laurent");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "2");
+		donnees.put("nom", "CHANCOGNE");
+		donnees.put("prenom", "laurent");
 		
-		Controleur.modifierIntervenant(Controleur.getIntervenants().get(0), données);
+		Controleur.modifierIntervenant(Controleur.getIntervenants().get(0), donnees);
 		
 		String []tab_attribut=Controleur.attributIntervenant();
 		
-		String[] tabValModif= new String[données.size()];
+		String[] tabValModif= new String[donnees.size()];
 		for(int i=0;i<tab_attribut.length;i++){
-			tabValModif[i]=données.get(tab_attribut[i]);
+			tabValModif[i]=donnees.get(tab_attribut[i]);
 		}
 		
 		boolean ok=true;
 		int i=0;
 		while(i<tab_attribut.length && ok){
-			if(! Controleur.getIntervenants().get(0).getDonnées().get(tab_attribut[i]).equals(tabValModif[i])){
+			if(! Controleur.getIntervenants().get(0).getDonnees().get(tab_attribut[i]).equals(tabValModif[i])){
 				ok=false;
 			}
 			i++;
@@ -719,21 +719,21 @@ public class TestsControleur extends TestCase {
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testFindSujet.csv");
+		Controleur.entres.put("Sujets", "test_data/testFindSujet.csv");
 		Controleur.importer();
 		
-		Hashtable<String, String> données = new Hashtable();
-		données.put("id", "6");
-		données.put("nom", "Val1");
-		données.put("titre", "Val2");
-		Sujets S = new Sujets(données);
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("id", "6");
+		donnees.put("nom", "Val1");
+		donnees.put("titre", "Val2");
+		Sujets S = new Sujets(donnees);
 		String []attribut = Controleur.attributSujet();
 		Sujets S_test = Controleur.findSujet("6");
 		if (S_test==null){
 			System.err.println("Aucun sujet pour cette identifiant");
 		}else{
-			while(i<S.getDonnées().size() && ok){
-				if(! S.getDonnées().get(attribut[i]).equals(S_test.getDonnées().get(attribut[i]))){
+			while(i<S.getDonnees().size() && ok){
+				if(! S.getDonnees().get(attribut[i]).equals(S_test.getDonnees().get(attribut[i]))){
 					ok=false;
 				}
 				i++;
@@ -741,7 +741,7 @@ public class TestsControleur extends TestCase {
 			if(ok){
 				nbTestsOk++;
 			}else{
-				System.err.println("la fonction findSujet trouve un sujet différent");
+				System.err.println("la fonction findSujet trouve un sujet different");
 			}
 		}
 	}	
@@ -750,12 +750,12 @@ public class TestsControleur extends TestCase {
 		String groupeRechercher = "A";
 		boolean ok;
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "data/etudiants.csv");
+		Controleur.entres.put("Etudiants", "data/etudiants.csv");
 		Controleur.importer();	
 		ArrayList<Etudiants> resultat = new ArrayList<Etudiants>();	
 		for(int i=0;i<Controleur.getEtudiants().size();i++){
 			//si on trouve un etudiant qui corespond au groupe rechercher on le stocke dans la list resultat
-			if(Controleur.getEtudiants().get(i).getDonnées().get("groupe").equals(groupeRechercher)){
+			if(Controleur.getEtudiants().get(i).getDonnees().get("groupe").equals(groupeRechercher)){
 				resultat.add(Controleur.getEtudiants().get(i));
 			}
 		}	
@@ -767,7 +767,7 @@ public class TestsControleur extends TestCase {
 			boolean ok2=true;
 			//on va verifier chaque nom des etudiants contenue dans les listes
 			while(i<resultat.size()){
-				if(!(resultat.get(i).getDonnées().get("nom").equals(test.get(i).getDonnées().get("nom")))){
+				if(!(resultat.get(i).getDonnees().get("nom").equals(test.get(i).getDonnees().get("nom")))){
 					ok=false;
 				}
 				i++;		
@@ -775,10 +775,10 @@ public class TestsControleur extends TestCase {
 			if(ok2){
 				nbTestsOk++;
 			}else{
-				System.err.println("la fonction getEtudiantsGroupe ne retourne pas les étudiant assigné au groupe : "+groupeRechercher);
+				System.err.println("la fonction getEtudiantsGroupe ne retourne pas les etudiant assigne au groupe : "+groupeRechercher);
 			}
 		}else{
-			System.err.println("la fonction getEtudiantsGroupe ne retourne pas le bon nombre d'étudiants");
+			System.err.println("la fonction getEtudiantsGroupe ne retourne pas le bon nombre d'etudiants");
 		}
 	}
 
@@ -797,7 +797,7 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testClonerProjet.csv");
+		Controleur.entres.put("Projets", "test_data/testClonerProjet.csv");
 		Controleur.importer();
 		
 		Projets P=Controleur.getProjets().get(0);
@@ -807,8 +807,8 @@ public class TestsControleur extends TestCase {
 
 		int i=0;
 		boolean ok=true;
-		if(P.getDonnées().get("groupe").equals(PTest.getDonnées().get("groupe")) && 
-				P.getDonnées().get("sujet").equals(PTest.getDonnées().get("sujet")) ){
+		if(P.getDonnees().get("groupe").equals(PTest.getDonnees().get("groupe")) && 
+				P.getDonnees().get("sujet").equals(PTest.getDonnees().get("sujet")) ){
 			nbTestsOk++;
 		}else{
 			System.err.println("erreur , la fonction clonerProjet ne clone pas le projet");
@@ -832,22 +832,22 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/testgetEtuGroupe.csv");
+		Controleur.entres.put("Etudiants", "test_data/testgetEtuGroupe.csv");
 		Controleur.importer();
 		
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "A");
-		données.put("nom", "lui");
-		données.put("prenom", "lui");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "A");
+		donnees.put("nom", "lui");
+		donnees.put("prenom", "lui");
 		
-		Hashtable<String, String> données2 = new Hashtable();
-		données2.put("groupe", "A");
-		données2.put("nom", "toi");
-		données2.put("prenom", "toi");
+		Hashtable<String, String> donnees2 = new Hashtable();
+		donnees2.put("groupe", "A");
+		donnees2.put("nom", "toi");
+		donnees2.put("prenom", "toi");
 		
 		ArrayList<Etudiants> List=new ArrayList<>();
-		List.add(new Etudiants(données));
-		List.add(new Etudiants(données2));
+		List.add(new Etudiants(donnees));
+		List.add(new Etudiants(donnees2));
 		
 		String groupeRech="A";
 		
@@ -859,7 +859,7 @@ public class TestsControleur extends TestCase {
 		if(List.size()==ListTest.size()){
 			for(int i=0;i<List.size();i++){
 				while(j<attribut.length){
-					if(! List.get(i).getDonnées().get(attribut[j]).equals(ListTest.get(i).getDonnées().get(attribut[j]))){
+					if(! List.get(i).getDonnees().get(attribut[j]).equals(ListTest.get(i).getDonnees().get(attribut[j]))){
 						ok=false;
 					}
 					
@@ -895,8 +895,8 @@ public class TestsControleur extends TestCase {
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testgetInteGrProjet.csv");
-		Controleur.entrés.put("Intervenants", "test_data/testgetInteGrInt.csv");
+		Controleur.entres.put("Projets", "test_data/testgetInteGrProjet.csv");
+		Controleur.entres.put("Intervenants", "test_data/testgetInteGrInt.csv");
 		Controleur.importer();
 	
 		String []tab_resultat={"1","5","8"};
@@ -949,8 +949,8 @@ public class TestsControleur extends TestCase {
 		}
 		
 		Controleur.initCsv();
-		Controleur.entrés.put("Projets", "test_data/testgetGroupeProjet.csv");
-		Controleur.entrés.put("Sujets", "test_data/testgetGroupeSujet.csv");
+		Controleur.entres.put("Projets", "test_data/testgetGroupeProjet.csv");
+		Controleur.entres.put("Sujets", "test_data/testgetGroupeSujet.csv");
 		Controleur.importer();
 
 		String [] tab_corect={"A","B","C","sujet1","sujet2","sujet3"};
@@ -970,7 +970,7 @@ public class TestsControleur extends TestCase {
 		if(ok){
 			nbTestsOk++;
 		}else{
-			System.err.println("erreur, la fonction getGroupes ne retourne pas les bons sujets assignés au groupe ");
+			System.err.println("erreur, la fonction getGroupes ne retourne pas les bons sujets assignes au groupe ");
 		}
 		
 		
@@ -1003,24 +1003,24 @@ nbTestsTotal++;
 		}catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Sujets", "test_data/testCptV_Sujets.csv");
-		Controleur.entrés.put("Voeux", "test_data/testCptV_Voeux.csv");
+		Controleur.entres.put("Sujets", "test_data/testCptV_Sujets.csv");
+		Controleur.entres.put("Voeux", "test_data/testCptV_Voeux.csv");
 		Controleur.importer();
 		
 	
-		String[][] résultat_test_id1= Controleur.compterVoeuxParPosition("1");
-		String[][] résultat_test_id2= Controleur.compterVoeuxParPosition("2");
-		String[][] résultat_test_id3= Controleur.compterVoeuxParPosition("3");
-		String[][] résultat_corect_id1={{"1","2"},{"2","0"},{"3","0"}};
-		String[][] résultat_corect_id2={{"1","0"},{"2","1"},{"3","1"}};
-		String[][] résultat_corect_id3={{"1","0"},{"2","0"},{"3","0"}};
+		String[][] resultat_test_id1= Controleur.compterVoeuxParPosition("1");
+		String[][] resultat_test_id2= Controleur.compterVoeuxParPosition("2");
+		String[][] resultat_test_id3= Controleur.compterVoeuxParPosition("3");
+		String[][] resultat_corect_id1={{"1","2"},{"2","0"},{"3","0"}};
+		String[][] resultat_corect_id2={{"1","0"},{"2","1"},{"3","1"}};
+		String[][] resultat_corect_id3={{"1","0"},{"2","0"},{"3","0"}};
 		
 		int i=0;
 		int j=0;
 		boolean ok=true;
 		while(i<Controleur.getSujets().size() && ok){
 			while(j<2 && ok){
-				if(! résultat_test_id1[i][j].equals(résultat_corect_id1[i][j])){
+				if(! resultat_test_id1[i][j].equals(resultat_corect_id1[i][j])){
 					ok=false;
 				}
 				j++;
@@ -1029,7 +1029,7 @@ nbTestsTotal++;
 		}
 		while(i<Controleur.getSujets().size() && ok){
 			while(j<2 && ok){
-				if(! résultat_test_id2[i][j].equals(résultat_corect_id2[i][j])){
+				if(! resultat_test_id2[i][j].equals(resultat_corect_id2[i][j])){
 					ok=false;
 				}
 				j++;
@@ -1038,7 +1038,7 @@ nbTestsTotal++;
 		}
 		while(i<Controleur.getSujets().size() && ok){
 			while(j<2 && ok){
-				if(! résultat_test_id3[i][j].equals(résultat_corect_id3[i][j])){
+				if(! resultat_test_id3[i][j].equals(resultat_corect_id3[i][j])){
 					ok=false;
 				}
 				j++;
@@ -1090,24 +1090,24 @@ nbTestsTotal++;
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Voeux", "test_data/testGetVoeux.csv");
+		Controleur.entres.put("Voeux", "test_data/testGetVoeux.csv");
 		Controleur.importer();
 		
 		ArrayList<Voeux>ListVoeux_Test = Controleur.getVoeux();
 		ArrayList<Voeux> ListVoeux = new ArrayList<Voeux>();
 		
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "val0");
-		données.put("sujet", "val1");
-		données.put("position", "val2");
-		Voeux V = new Voeux(données);
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "val0");
+		donnees.put("sujet", "val1");
+		donnees.put("position", "val2");
+		Voeux V = new Voeux(donnees);
 		ListVoeux.add(V);
 		
 		int i=0;
 		boolean ok=true;
 		String []attribut= Controleur.attributVoeux();
 		while(i<attribut.length){
-			if(! ListVoeux.get(0).getDonnées().get(attribut[i]).equals(ListVoeux_Test.get(0).getDonnées().get(attribut[i]))){
+			if(! ListVoeux.get(0).getDonnees().get(attribut[i]).equals(ListVoeux_Test.get(0).getDonnees().get(attribut[i]))){
 				ok=false;
 			}
 			i++;
@@ -1131,7 +1131,7 @@ nbTestsTotal++;
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Voeux", "test_data/testSuppVoeux.csv");
+		Controleur.entres.put("Voeux", "test_data/testSuppVoeux.csv");
 		Controleur.importer();
 		
 		ArrayList<Voeux>ListVoeux_Test = Controleur.getVoeux();
@@ -1156,17 +1156,17 @@ nbTestsTotal++;
 		} catch (IOException e) {
 		}
 		Controleur.initCsv();
-		Controleur.entrés.put("Voeux", "test_data/testAjjVoeux.csv");
+		Controleur.entres.put("Voeux", "test_data/testAjjVoeux.csv");
 		Controleur.importer();
 		
 		
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val0");
-		données.put("sujet", "Val1");
-		données.put("position", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val0");
+		donnees.put("sujet", "Val1");
+		donnees.put("position", "Val2");
 		ArrayList<Voeux>ListVoeux = Controleur.getVoeux();
-		Voeux V = new Voeux(données);
-		Controleur.ajouterVoeux(données);
+		Voeux V = new Voeux(donnees);
+		Controleur.ajouterVoeux(donnees);
 		if(Controleur.getVoeux().size()==2){
 			nbTestsOk++;
 		}else{
@@ -1186,29 +1186,29 @@ nbTestsTotal++;
 		}
 
 		Controleur.initCsv();
-		Controleur.entrés.put("Voeux", "test_data/testModifVoeux.csv");
+		Controleur.entres.put("Voeux", "test_data/testModifVoeux.csv");
 		Controleur.importer();
 
-		Hashtable<String, String> données = new Hashtable();
-		données.put("groupe", "Val0");
-		données.put("sujet", "Val1");
-		données.put("position", "Val2");
+		Hashtable<String, String> donnees = new Hashtable();
+		donnees.put("groupe", "Val0");
+		donnees.put("sujet", "Val1");
+		donnees.put("position", "Val2");
 		
-		Controleur.modifierVoeux(Controleur.getVoeux().get(0), données);
+		Controleur.modifierVoeux(Controleur.getVoeux().get(0), donnees);
 		
 		String []tab_attribut=Controleur.attributVoeux();
 		
-		String[] tabValModif= new String[données.size()];
+		String[] tabValModif= new String[donnees.size()];
 		
-		//creation automatique du tableau contenant les donnée modifié
+		//creation automatique du tableau contenant les donnee modifie
 		for(int i=0;i<tabValModif.length;i++){
-			tabValModif[i]=données.get(tab_attribut[i]);
+			tabValModif[i]=donnees.get(tab_attribut[i]);
 		}
 		
 		boolean ok=true;
 		int i=0;
 		while(i<tab_attribut.length && ok){
-			if(! Controleur.getVoeux().get(0).getDonnées().get(tab_attribut[i]).equals(tabValModif[i])){
+			if(! Controleur.getVoeux().get(0).getDonnees().get(tab_attribut[i]).equals(tabValModif[i])){
 				ok=false;
 			}
 			i++;
@@ -1224,7 +1224,7 @@ nbTestsTotal++;
 	
 	public static void main(String[] args) {
 		junit.textui.TestRunner.run(new TestSuite(TestsControleur.class));
-		System.out.println(nbTestsOk + "/" + nbTestsTotal + " tests validés.");
+		System.out.println(nbTestsOk + "/" + nbTestsTotal + " tests valides.");
 	}
 
 }

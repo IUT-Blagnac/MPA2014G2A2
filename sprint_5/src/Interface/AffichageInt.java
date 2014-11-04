@@ -50,7 +50,7 @@ public class AffichageInt {
 			ArrayList<Intervenants> temp = new ArrayList<Intervenants>();
 			
 			for(int i=0;i<liste.size();i++){
-				if(liste.get(i).getDonnées().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
+				if(liste.get(i).getDonnees().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
 					temp.add(liste.get(i));
 				}	
 			}
@@ -106,7 +106,7 @@ public class AffichageInt {
 		panGroupe.setLayout(gdlay);
 		for (int i = 0; i < liste.size(); i++) {
 			
-			bouton[i] = new JButton(liste.get(i).getDonnées().get("prenom") + " " + liste.get(i).getDonnées().get("nom"));
+			bouton[i] = new JButton(liste.get(i).getDonnees().get("prenom") + " " + liste.get(i).getDonnees().get("nom"));
 			bouton[i].setBackground(new Color(200,221,242));
 			bouton[i].setPreferredSize(new Dimension(180,30));
 			
@@ -139,7 +139,7 @@ public class AffichageInt {
 		petitCentre.setLayout(new BoxLayout(petitCentre, BoxLayout.PAGE_AXIS));
 
 		intervenant.setBackground(new Color(200,221,242));
-		labelsujet = new JLabel("Sélectionnez un intervenant");
+		labelsujet = new JLabel("Selectionnez un intervenant");
 		labelsujet.setFont(new Font("Arial", Font.PLAIN, 16));
 		intervenant.add(labelsujet);
 		
@@ -154,14 +154,14 @@ public class AffichageInt {
 		
 		ajout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Hashtable<String, String> données = new Hashtable<String, String>();
+				Hashtable<String, String> donnees = new Hashtable<String, String>();
 				
 				String[] attributs = Controleur.attributIntervenant();
 				for(int k=0;k<attributs.length;k++) {
-					données.put(attributs[k], "");
+					donnees.put(attributs[k], "");
 				}
 				
-				Enregistrement nouveauInter = new Enregistrement(données, parent, "Nouvel intervenant", "intervenant");
+				Enregistrement nouveauInter = new Enregistrement(donnees, parent, "Nouvel intervenant", "intervenant");
 			}
 		});
 		
@@ -169,7 +169,7 @@ public class AffichageInt {
 			public void actionPerformed(ActionEvent arg0) {
                 if (selected != null){ //si un intervenant est selectionner :
                 	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer l'intervenants  <FONT COLOR=\"red\">"
-                			+ selected.getDonnées().get("nom")
+                			+ selected.getDonnees().get("nom")
                 			+ "</FONT>.<br>Continuer ?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
                 		Controleur.supprimerIntervenant(selected);
                 		FenetrePrincipale.Maj();
@@ -183,9 +183,9 @@ public class AffichageInt {
 		modifier.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg) {
                 if (selected != null){ //si un intervenant est selectionner :
-                	Enregistrement modifInt = new Enregistrement(selected.getDonnées(), parent, "Modifier un intervenant");
+                	Enregistrement modifInt = new Enregistrement(selected.getDonnees(), parent, "Modifier un intervenant");
                 }else{ //sinon, message d'erreur
-                	JOptionPane.showMessageDialog(null, "Veuillez sélectionner un intervenant");	
+                	JOptionPane.showMessageDialog(null, "Veuillez selectionner un intervenant");	
                 }  
 			}
 		});
@@ -211,11 +211,11 @@ public class AffichageInt {
 	}
 	
 	public static void select_inter(Intervenants inter) {
-		labelsujet.setText(inter.getDonnées().get("prenom") + " " + inter.getDonnées().get("nom"));
+		labelsujet.setText(inter.getDonnees().get("prenom") + " " + inter.getDonnees().get("nom"));
 		
 		selected = inter;
 		
-		/* Création des données pour afficher les projets */
+		/* Creation des donnees pour afficher les projets */
 		String[] entetes = {"id", "groupe", "sujet", "role"};
 		
 		Object[][] projData = Controleur.intervenantPlus(selected);

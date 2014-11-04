@@ -29,7 +29,7 @@ public class Recherche extends JDialog {
 	private JDialog jd;
 	
 	/**
-	 * Crée et affiche une fenetre de recherche restreinte par attributs selectionné attributs .
+	 * Cree et affiche une fenetre de recherche restreinte par attributs selectionne attributs .
 	 * @param sortie Le tableau de sorties.
 	 * @param entete Un tableau d'entetes.
 	 * @param parent La fenetre mère.
@@ -55,7 +55,7 @@ public class Recherche extends JDialog {
 		
 		Font police = new Font("Arial", Font.PLAIN, 16);
 		
-		/* Liste déroulante des attributs */
+		/* Liste deroulante des attributs */
 		JLabel text_attribut = new JLabel("Attribut sur lequel porte la recherche :");
 		text_attribut.setFont(police);
 		text_attribut.setPreferredSize(new Dimension(300, 50));

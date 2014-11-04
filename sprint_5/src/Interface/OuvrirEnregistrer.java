@@ -40,7 +40,7 @@ public class OuvrirEnregistrer extends JDialog{
 	private OuvrirEnregistrer cetteFen;
 	
 	/**
-	 * Crée une fenêtre permettant de Sauvegarder ou Ouvrir les differents éléments
+	 * Cree une fenêtre permettant de Sauvegarder ou Ouvrir les differents elements
 	 * @param sortie Donner une hashtable comportant [nomAttributs] vers [chemin actuel d'ouverture/enregistrement]
 	 * @param nomFon le traitement à effectuer "Ouvrir" pour ouvrir ou "Enregistrer" pour Enregistrer
 	 * @throws IOException exception maggle
@@ -186,11 +186,11 @@ public class OuvrirEnregistrer extends JDialog{
 				if(nomFonc.equals("Ouvrir")){
 					Controleur.importer();
 					FenetrePrincipale.Maj();
-					Controleur.sorties.put("Etudiants", Controleur.entrés.get("Etudiants"));
-					Controleur.sorties.put("Sujets", Controleur.entrés.get("Sujets"));
-					Controleur.sorties.put("Projets", Controleur.entrés.get("Projets"));
-					Controleur.sorties.put("Intervenants", Controleur.entrés.get("Intervenants"));
-					Controleur.sorties.put("Voeux", Controleur.entrés.get("Voeux"));
+					Controleur.sorties.put("Etudiants", Controleur.entres.get("Etudiants"));
+					Controleur.sorties.put("Sujets", Controleur.entres.get("Sujets"));
+					Controleur.sorties.put("Projets", Controleur.entres.get("Projets"));
+					Controleur.sorties.put("Intervenants", Controleur.entres.get("Intervenants"));
+					Controleur.sorties.put("Voeux", Controleur.entres.get("Voeux"));
 				}else if(nomFonc.equals("Enregistrer")){
 					Controleur.exporter('a');
 				}
@@ -209,7 +209,7 @@ public class OuvrirEnregistrer extends JDialog{
 				JFileChooser chooser = new JFileChooser();
 			    FileNameExtensionFilter filter = new FileNameExtensionFilter("Fichier CSV","csv");
 			    chooser.setFileFilter(filter);
-			    chooser.setApproveButtonText("Sélectionner");
+			    chooser.setApproveButtonText("Selectionner");
 			    int returnVal = chooser.showOpenDialog(this);
 			    if(returnVal == JFileChooser.APPROVE_OPTION) {
 			    	String resultat=chooser.getSelectedFile().getCanonicalPath();

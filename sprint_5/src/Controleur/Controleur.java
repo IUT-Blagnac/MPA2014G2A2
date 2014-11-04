@@ -18,7 +18,7 @@ public class Controleur {
 	///////// * DONNEES * /////////////////
 	///////////////////////////////////////
 	
-	public static Hashtable<String, String> entrés = new Hashtable<String, String>();
+	public static Hashtable<String, String> entres = new Hashtable<String, String>();
 	public static Hashtable<String, String> sorties = new Hashtable<String, String>();
 	
 	/* Classes */
@@ -34,11 +34,11 @@ public class Controleur {
 	
 	/* Initialise fichiers */
 	public static void initCsv() {
-		entrés.put("Etudiants", "data/etudiants2014_2015.csv");
-		entrés.put("Intervenants", "data/intervenants2014_2015.csv");
-		entrés.put("Projets", "data/projets2014_2015.csv");
-		entrés.put("Sujets", "data/sujets2014_2015.csv");
-		entrés.put("Voeux", "data/voeux2014_2015.csv");
+		entres.put("Etudiants", "data/etudiants2014_2015.csv");
+		entres.put("Intervenants", "data/intervenants2014_2015.csv");
+		entres.put("Projets", "data/projets2014_2015.csv");
+		entres.put("Sujets", "data/sujets2014_2015.csv");
+		entres.put("Voeux", "data/voeux2014_2015.csv");
 		
 		sorties.put("Etudiants", "");
 		sorties.put("Intervenants", "");
@@ -47,7 +47,7 @@ public class Controleur {
 		sorties.put("Voeux", "");
 	}
 	
-	/* Importation des données */
+	/* Importation des donnees */
 	public static boolean importer() {
 		try {
 			listeEtudiants.clear();
@@ -57,7 +57,7 @@ public class Controleur {
 			listeVoeux.clear();
 			
 			/* Etudiants */
-			Hashtable<String, String>[] etudiants = Optilib.reader(entrés.get("Etudiants"));
+			Hashtable<String, String>[] etudiants = Optilib.reader(entres.get("Etudiants"));
 			
 			for(int i=0;i<etudiants.length;i++) {
 				listeEtudiants.add(new Etudiants(etudiants[i]));
@@ -65,25 +65,25 @@ public class Controleur {
 			}
 			
 			/* Intervenants */
-			Hashtable<String, String>[] intervenants = Optilib.reader(entrés.get("Intervenants"));
+			Hashtable<String, String>[] intervenants = Optilib.reader(entres.get("Intervenants"));
 			for(int i=0;i<intervenants.length;i++) {
 				listeIntervenants.add(new Intervenants(intervenants[i]));
 			}
 			
 			/* Projets */
-			Hashtable<String, String>[] projets = Optilib.reader(entrés.get("Projets"));
+			Hashtable<String, String>[] projets = Optilib.reader(entres.get("Projets"));
 			for(int i=0;i<projets.length;i++) {
 				listeProjets.add(new Projets(projets[i]));
 			}
 			
 			/* Sujets */
-			Hashtable<String, String>[] sujets = Optilib.reader(entrés.get("Sujets"));
+			Hashtable<String, String>[] sujets = Optilib.reader(entres.get("Sujets"));
 			for(int i=0;i<sujets.length;i++) {
 				listeSujets.add(new Sujets(sujets[i]));
 			}
 			
 			/* Voeux */
-			Hashtable<String, String>[] voeux = Optilib.reader(entrés.get("Voeux"));
+			Hashtable<String, String>[] voeux = Optilib.reader(entres.get("Voeux"));
 			for(int i=0;i<voeux.length;i++) {
 				listeVoeux.add(new Voeux(voeux[i]));
 			}
@@ -94,7 +94,7 @@ public class Controleur {
 		}
 	}
 	
-	/* Exportation des données */
+	/* Exportation des donnees */
 	public static boolean exporter(char classe) {
 		switch(classe) {
 		case 'a' :
@@ -126,7 +126,7 @@ public class Controleur {
 			for(int i=0;i<listeEtudiants.size();i++) {
 				hashEtudiants[i] = new Hashtable<String, String>();
 				for(int j=0;j<attributs.length;j++) {
-					hashEtudiants[i].put(attributs[j], listeEtudiants.get(i).getDonnées().get(attributs[j]));
+					hashEtudiants[i].put(attributs[j], listeEtudiants.get(i).getDonnees().get(attributs[j]));
 				}
 			}
 			Optilib.saver(hashEtudiants, sorties.get("Etudiants"));
@@ -146,7 +146,7 @@ public class Controleur {
 			for(int i=0;i<listeIntervenants.size();i++) {
 				hashIntervenants[i] = new Hashtable<String, String>();
 				for(int j=0;j<attributs.length;j++) {
-					hashIntervenants[i].put(attributs[j], listeIntervenants.get(i).getDonnées().get(attributs[j]));
+					hashIntervenants[i].put(attributs[j], listeIntervenants.get(i).getDonnees().get(attributs[j]));
 				}
 			}
 			Optilib.saver(hashIntervenants, sorties.get("Intervenants"));
@@ -166,7 +166,7 @@ public class Controleur {
 			for(int i=0;i<listeProjets.size();i++) {
 				hashProjets[i] = new Hashtable<String, String>();
 				for(int j=0;j<attributs.length;j++) {
-					hashProjets[i].put(attributs[j], listeProjets.get(i).getDonnées().get(attributs[j]));
+					hashProjets[i].put(attributs[j], listeProjets.get(i).getDonnees().get(attributs[j]));
 				}
 			}
 			Optilib.saver(hashProjets, sorties.get("Projets"));
@@ -186,7 +186,7 @@ public class Controleur {
 			for(int i=0;i<listeSujets.size();i++) {
 				hashSujets[i] = new Hashtable<String, String>();
 				for(int j=0;j<attributs.length;j++) {
-					hashSujets[i].put(attributs[j], listeSujets.get(i).getDonnées().get(attributs[j]));
+					hashSujets[i].put(attributs[j], listeSujets.get(i).getDonnees().get(attributs[j]));
 				}
 			}
 			Optilib.saver(hashSujets, sorties.get("Sujets"));
@@ -205,7 +205,7 @@ public class Controleur {
 			for(int i=0;i<listeVoeux.size();i++) {
 				hashVoeux[i] = new Hashtable<String, String>();
 				for(int j=0;j<attributs.length;j++) {
-					hashVoeux[i].put(attributs[j], listeVoeux.get(i).getDonnées().get(attributs[j]));
+					hashVoeux[i].put(attributs[j], listeVoeux.get(i).getDonnees().get(attributs[j]));
 				}
 			}
 			Optilib.saver(hashVoeux, sorties.get("Voeux"));
@@ -222,41 +222,41 @@ public class Controleur {
 	///////// * ETUDIANTS * ///////////////
 	///////////////////////////////////////
 	
-	/* Trouve tous les étudiants */
+	/* Trouve tous les etudiants */
 	public static ArrayList<Etudiants> getEtudiants() {
 		return listeEtudiants;
 	}
 
-	/* Supprimer étudiant */
+	/* Supprimer etudiant */
 	public static boolean supprimerEtudiant(Etudiants e) {
 		return listeEtudiants.remove(e);
 	}
 	
-	/* Ajouter étudiant */
-	public static void ajouterEtudiant(Hashtable<String, String> données) {
-		listeEtudiants.add(new Etudiants(données));
+	/* Ajouter etudiant */
+	public static void ajouterEtudiant(Hashtable<String, String> donnees) {
+		listeEtudiants.add(new Etudiants(donnees));
 	}
 	
-	/* Modifier étudiant */
-	public static void modifierEtudiant(Etudiants e, Hashtable<String, String> données) {
-		e.setDonnées(données);
+	/* Modifier etudiant */
+	public static void modifierEtudiant(Etudiants e, Hashtable<String, String> donnees) {
+		e.setDonnees(donnees);
 	}
 	
-	/* Attributs étudiant */
+	/* Attributs etudiant */
 	public static String[] attributEtudiant() {
 		return Etudiants.getAttributs();
 	}
 	
-	/* Trouve un étudiant à partir d'un mot clef et d'un attribut */
+	/* Trouve un etudiant à partir d'un mot clef et d'un attribut */
 	public static ArrayList<Etudiants> searchEtudiant(String attribut, String valeur) {
-		ArrayList<Etudiants> résultat = new ArrayList<Etudiants>();
+		ArrayList<Etudiants> resultat = new ArrayList<Etudiants>();
 		
 		for(int i=0;i<listeEtudiants.size();i++) {
-			if(listeEtudiants.get(i).getDonnées().get(attribut).contains(valeur)) {
-				résultat.add(listeEtudiants.get(i));
+			if(listeEtudiants.get(i).getDonnees().get(attribut).contains(valeur)) {
+				resultat.add(listeEtudiants.get(i));
 			}
 		}
-		return résultat;
+		return resultat;
 	}
 	
 	///////////////////////////////////////
@@ -274,8 +274,8 @@ public class Controleur {
 	}
 	
 	/* Ajouter intervenant */
-	public static void ajouterIntervenant(Hashtable<String, String> données) {
-		listeIntervenants.add(new Intervenants(données));
+	public static void ajouterIntervenant(Hashtable<String, String> donnees) {
+		listeIntervenants.add(new Intervenants(donnees));
 	}
 	
 	/* Attributs intervenant */
@@ -284,26 +284,26 @@ public class Controleur {
 	}
 	
 	/* Modifier intervenant */
-	public static void modifierIntervenant(Intervenants i, Hashtable<String, String> données) {
-		i.setDonnées(données);
+	public static void modifierIntervenant(Intervenants i, Hashtable<String, String> donnees) {
+		i.setDonnees(donnees);
 	}
 
 	/* Trouve un intervenant à partir d'un mot clef et d'un attribut */
 	public static ArrayList<Intervenants> searchIntervenant(String attribut, String valeur) {
-		ArrayList<Intervenants> résultat = new ArrayList<Intervenants>();
+		ArrayList<Intervenants> resultat = new ArrayList<Intervenants>();
 		
 		for(int i=0;i<listeIntervenants.size();i++) {
-			if(listeIntervenants.get(i).getDonnées().get(attribut).contains(valeur)) {
-				résultat.add(listeIntervenants.get(i));
+			if(listeIntervenants.get(i).getDonnees().get(attribut).contains(valeur)) {
+				resultat.add(listeIntervenants.get(i));
 			}
 		}
-		return résultat;
+		return resultat;
 	}
 
 	/* Trouve un intervenant à partir de son id */
 	public static Intervenants findIntervenant(String id) {
 		for(int i=0;i<listeIntervenants.size();i++) {
-			if(listeIntervenants.get(i).getDonnées().get("id").equals(id)) {
+			if(listeIntervenants.get(i).getDonnees().get("id").equals(id)) {
 				return listeIntervenants.get(i);
 			}
 		}
@@ -319,9 +319,9 @@ public class Controleur {
 		ArrayList<Projets> projetsSuper = new ArrayList<Projets>();
 		ArrayList<Projets> projetsSupTech = new ArrayList<Projets>();
 		
-		projetsClient.addAll(Controleur.searchProjet("client", i.getDonnées().get("id")));
-		projetsSuper.addAll(Controleur.searchProjet("superviseur", i.getDonnées().get("id")));
-		projetsSupTech.addAll(Controleur.searchProjet("support_technique", i.getDonnées().get("id")));
+		projetsClient.addAll(Controleur.searchProjet("client", i.getDonnees().get("id")));
+		projetsSuper.addAll(Controleur.searchProjet("superviseur", i.getDonnees().get("id")));
+		projetsSupTech.addAll(Controleur.searchProjet("support_technique", i.getDonnees().get("id")));
 		
 		String[] entetes = {"id", "groupe", "sujet", "role"};
 		
@@ -333,29 +333,29 @@ public class Controleur {
 		listeDesRoles.clear();
 		
 		for(int j=0;j<projetsClient.size();j++) {
-			Sujets s = Controleur.findSujet(projetsClient.get(j).getDonnées().get("sujet"));
+			Sujets s = Controleur.findSujet(projetsClient.get(j).getDonnees().get("sujet"));
 				
-			projData[j][0] = projetsClient.get(j).getDonnées().get("id");
-			projData[j][1] = projetsClient.get(j).getDonnées().get("groupe");
-			projData[j][2] = s.getDonnées().get("nom");
+			projData[j][0] = projetsClient.get(j).getDonnees().get("id");
+			projData[j][1] = projetsClient.get(j).getDonnees().get("groupe");
+			projData[j][2] = s.getDonnees().get("nom");
 			projData[j][3] = "Client";
 		}
 		
 		for(int j=0;j<projetsSuper.size();j++) {
-			Sujets s = Controleur.findSujet(projetsSuper.get(j).getDonnées().get("sujet"));
+			Sujets s = Controleur.findSujet(projetsSuper.get(j).getDonnees().get("sujet"));
 				
-			projData[projetsClient.size() + j][0] = projetsSuper.get(j).getDonnées().get("id");
-			projData[projetsClient.size() + j][1] = projetsSuper.get(j).getDonnées().get("groupe");
-			projData[projetsClient.size() + j][2] = s.getDonnées().get("nom");
+			projData[projetsClient.size() + j][0] = projetsSuper.get(j).getDonnees().get("id");
+			projData[projetsClient.size() + j][1] = projetsSuper.get(j).getDonnees().get("groupe");
+			projData[projetsClient.size() + j][2] = s.getDonnees().get("nom");
 			projData[projetsClient.size() + j][3] = "Superviseur";
 		}
 		
 		for(int j=0;j<projetsSupTech.size();j++) {
-			Sujets s = Controleur.findSujet(projetsSupTech.get(j).getDonnées().get("sujet"));
+			Sujets s = Controleur.findSujet(projetsSupTech.get(j).getDonnees().get("sujet"));
 				
-			projData[projetsClient.size() + projetsSuper.size() + j][0] = projetsSupTech.get(j).getDonnées().get("id");
-			projData[projetsClient.size() + projetsSuper.size() + j][1] = projetsSupTech.get(j).getDonnées().get("groupe");
-			projData[projetsClient.size() + projetsSuper.size() + j][2] = s.getDonnées().get("nom");
+			projData[projetsClient.size() + projetsSuper.size() + j][0] = projetsSupTech.get(j).getDonnees().get("id");
+			projData[projetsClient.size() + projetsSuper.size() + j][1] = projetsSupTech.get(j).getDonnees().get("groupe");
+			projData[projetsClient.size() + projetsSuper.size() + j][2] = s.getDonnees().get("nom");
 			projData[projetsClient.size() + projetsSuper.size() + j][3] = "Support Technique";
 		}
 		
@@ -377,8 +377,8 @@ public class Controleur {
 	}
 	
 	/* Ajouter sujet */
-	public static void ajouterSujet(Hashtable<String, String> données) {
-		listeSujets.add(new Sujets(données));
+	public static void ajouterSujet(Hashtable<String, String> donnees) {
+		listeSujets.add(new Sujets(donnees));
 	}
 	
 	/* Attributs sujet */
@@ -387,14 +387,14 @@ public class Controleur {
 	}
 	
 	/* Modifier sujet */
-	public static void modifierSujet(Sujets s, Hashtable<String, String> données) {
-		s.setDonnées(données);
+	public static void modifierSujet(Sujets s, Hashtable<String, String> donnees) {
+		s.setDonnees(donnees);
 	}
 	
 	/* Trouve un sujet à partir de son id */
 	public static Sujets findSujet(String id) {
 		for(int i=0;i<listeSujets.size();i++) {
-			if(listeSujets.get(i).getDonnées().get("id").equals(id)) {
+			if(listeSujets.get(i).getDonnees().get("id").equals(id)) {
 				return listeSujets.get(i);
 			}
 		}
@@ -403,33 +403,33 @@ public class Controleur {
 	
 	/* Trouve un sujet à partir d'un mot clef et d'un attribut */
 	public static ArrayList<Sujets> searchSujet(String attribut, String valeur) {
-		ArrayList<Sujets> résultat = new ArrayList<Sujets>();
+		ArrayList<Sujets> resultat = new ArrayList<Sujets>();
 		
 		for(int i=0;i<listeSujets.size();i++) {
-			if(listeSujets.get(i).getDonnées().get(attribut).contains(valeur)) {
-				résultat.add(listeSujets.get(i));
+			if(listeSujets.get(i).getDonnees().get(attribut).contains(valeur)) {
+				resultat.add(listeSujets.get(i));
 			}
 		}
-		return résultat;
+		return resultat;
 	}
 	
 	/* Compte le nombre de voeux par position pour un sujet */
 	public static String[][] compterVoeuxParPosition(String idSujet) {
-		String[][] résultat = new String[listeSujets.size()][2];
+		String[][] resultat = new String[listeSujets.size()][2];
 		int[] compteur = new int[listeSujets.size()];
 		
 		for(int i=0;i<listeVoeux.size();i++) {
-			if(listeVoeux.get(i).getDonnées().get("sujet").equals(idSujet)) {
-				compteur[Integer.parseInt(listeVoeux.get(i).getDonnées().get("position"))-1]++;
+			if(listeVoeux.get(i).getDonnees().get("sujet").equals(idSujet)) {
+				compteur[Integer.parseInt(listeVoeux.get(i).getDonnees().get("position"))-1]++;
 			}
 		}
 		
 		for(int i=0;i<listeSujets.size();i++) {
-			résultat[i][0] = Integer.toString(i+1);
-			résultat[i][1] = Integer.toString(compteur[i]);
+			resultat[i][0] = Integer.toString(i+1);
+			resultat[i][1] = Integer.toString(compteur[i]);
 		}
 		
-		return résultat;
+		return resultat;
 	}
 	
 	///////////////////////////////////////
@@ -444,7 +444,7 @@ public class Controleur {
 	/* Trouve un projet à partir de son id */
 	public static Projets findProjet(String id) {
 		for(int i=0;i<listeProjets.size();i++) {
-			if(listeProjets.get(i).getDonnées().get("id").equals(id)) {
+			if(listeProjets.get(i).getDonnees().get("id").equals(id)) {
 				return listeProjets.get(i);
 			}
 		}
@@ -457,21 +457,21 @@ public class Controleur {
 	}
 	
 	/* Ajouter projet */
-	public static void ajouterProjet(Hashtable<String, String> données) {
-		listeProjets.add(new Projets(données));
+	public static void ajouterProjet(Hashtable<String, String> donnees) {
+		listeProjets.add(new Projets(donnees));
 	}
 
 	/* Cloner un projet */
 	public static Projets clonerProjet(Projets p) {
 		Hashtable<String, String> clone = new Hashtable<String, String>();
 		
-		clone.put("groupe", p.getDonnées().get("groupe"));
-		clone.put("sujet", p.getDonnées().get("sujet"));
+		clone.put("groupe", p.getDonnees().get("groupe"));
+		clone.put("sujet", p.getDonnees().get("sujet"));
 		
-		Projets projetCloné = new Projets(clone);
+		Projets projetClone = new Projets(clone);
 		
-		listeProjets.add(projetCloné);
-		return projetCloné;
+		listeProjets.add(projetClone);
+		return projetClone;
 	}
 	
 	/* Attributs projet */
@@ -480,28 +480,28 @@ public class Controleur {
 	}
 	
 	/* Modifier projet */
-	public static void modifierProjet(Projets p, Hashtable<String, String> données) {
-		p.setDonnées(données);
+	public static void modifierProjet(Projets p, Hashtable<String, String> donnees) {
+		p.setDonnees(donnees);
 	}
 	
 	/* Trouve un projet à partir d'un mot clef et d'un attribut */
 	public static ArrayList<Projets> searchProjet(String attribut, String valeur) {
-		ArrayList<Projets> résultat = new ArrayList<Projets>();
+		ArrayList<Projets> resultat = new ArrayList<Projets>();
 		
 		if(attribut.equals("client") || attribut.equals("superviseur") || attribut.equals("support_technique")) {
 			for(int i=0;i<listeProjets.size();i++) {
-				if(listeProjets.get(i).getDonnées().get(attribut).equals(valeur)) {
-					résultat.add(listeProjets.get(i));
+				if(listeProjets.get(i).getDonnees().get(attribut).equals(valeur)) {
+					resultat.add(listeProjets.get(i));
 				}
 			}
 		} else {
 			for(int i=0;i<listeProjets.size();i++) {
-				if(listeProjets.get(i).getDonnées().get(attribut).contains(valeur)) {
-					résultat.add(listeProjets.get(i));
+				if(listeProjets.get(i).getDonnees().get(attribut).contains(valeur)) {
+					resultat.add(listeProjets.get(i));
 				}
 			}
 		}
-		return résultat;
+		return resultat;
 	}
 	
 	///////////////////////////////////////
@@ -511,13 +511,13 @@ public class Controleur {
 	/* Renvoie la liste des groupes avec leur sujet */
 	public static String[][] getGroupes() {
 		ArrayList<String> groupesTemp = new ArrayList<String>();
-		String déjàPrésent = "";
+		String dejàPresent = "";
 		
 		for(int i=0;i<listeEtudiants.size();i++) {
-			String groupe = listeEtudiants.get(i).getDonnées().get("groupe");
+			String groupe = listeEtudiants.get(i).getDonnees().get("groupe");
 			
-			if(!déjàPrésent.contains("#" + groupe + "#")) {
-				déjàPrésent += "#" + groupe + "#";
+			if(!dejàPresent.contains("#" + groupe + "#")) {
+				dejàPresent += "#" + groupe + "#";
 				groupesTemp.add(groupe);
 			}
 		}
@@ -527,7 +527,7 @@ public class Controleur {
 		for(int i=0;i<groupes[0].length;i++) {
 			groupes[0][i] = groupesTemp.get(i);
 			try {
-				groupes[1][i] = findSujet(listeProjets.get(i).getDonnées().get("sujet")).getDonnées().get("nom");
+				groupes[1][i] = findSujet(listeProjets.get(i).getDonnees().get("sujet")).getDonnees().get("nom");
 			} catch(Exception e) {
 				groupes[1][i] = "Aucun sujet";
 			}
@@ -536,21 +536,21 @@ public class Controleur {
 		return groupes;
 	}
 	
-	/* Trouve les étudiants d'un groupe */
+	/* Trouve les etudiants d'un groupe */
 	public static ArrayList<Etudiants> getEtudiantsGroupe(String g) {
-		ArrayList<Etudiants> résultat = new ArrayList<Etudiants>();
+		ArrayList<Etudiants> resultat = new ArrayList<Etudiants>();
 		
 		for(int i=0;i<listeEtudiants.size();i++) {
-			if(listeEtudiants.get(i).getDonnées().get("groupe").equals(g)) {
-				résultat.add(listeEtudiants.get(i));
+			if(listeEtudiants.get(i).getDonnees().get("groupe").equals(g)) {
+				resultat.add(listeEtudiants.get(i));
 			}
 		}
-		return résultat;
+		return resultat;
 	}
 	
 	/* Trouve les intervenants d'un projet d'un groupe */
 	public static String[] getIntervenantsGroupe(String g) {
-		String[] résultat = new String[3];
+		String[] resultat = new String[3];
 		
 		int compteur = 0;
 		boolean found = false;
@@ -558,7 +558,7 @@ public class Controleur {
 		Projets leProjet = null;
 		
 		while(compteur<listeProjets.size() && !found) {
-			if(listeProjets.get(compteur).getDonnées().get("groupe").equals(g)) {
+			if(listeProjets.get(compteur).getDonnees().get("groupe").equals(g)) {
 				found = true;
 				leProjet = listeProjets.get(compteur);
 			}
@@ -566,27 +566,27 @@ public class Controleur {
 			compteur++;
 		}
 		
-		résultat[0] = leProjet.getDonnées().get("client");
-		résultat[1] = leProjet.getDonnées().get("superviseur");
-		résultat[2] = leProjet.getDonnées().get("support_technique");
+		resultat[0] = leProjet.getDonnees().get("client");
+		resultat[1] = leProjet.getDonnees().get("superviseur");
+		resultat[2] = leProjet.getDonnees().get("support_technique");
 		
-		return résultat;
+		return resultat;
 	}
 
-	/* Position du sujet affecté au groupe si existe */
+	/* Position du sujet affecte au groupe si existe */
 	public static String positionSujetGroupe(String g) {
 		String sujet = "";
 		
 		for(int i=0;i<listeProjets.size();i++) {
-			if(listeProjets.get(i).getDonnées().get("groupe").equals(g)) {
-				sujet = listeProjets.get(i).getDonnées().get("sujet");
+			if(listeProjets.get(i).getDonnees().get("groupe").equals(g)) {
+				sujet = listeProjets.get(i).getDonnees().get("sujet");
 				break;
 			}
 		}
 		
 		for(int i=0;i<listeVoeux.size();i++) {
-			if(listeVoeux.get(i).getDonnées().get("sujet").equals(sujet)) {
-				return listeVoeux.get(i).getDonnées().get("position");
+			if(listeVoeux.get(i).getDonnees().get("sujet").equals(sujet)) {
+				return listeVoeux.get(i).getDonnees().get("position");
 			}
 		}
 		
@@ -608,13 +608,13 @@ public class Controleur {
 	}
 	
 	/* Ajouter voeu */
-	public static void ajouterVoeux(Hashtable<String, String> données) {
-		listeVoeux.add(new Voeux(données));
+	public static void ajouterVoeux(Hashtable<String, String> donnees) {
+		listeVoeux.add(new Voeux(donnees));
 	}
 	
 	/* Modifier voeu */
-	public static void modifierVoeux(Voeux e, Hashtable<String, String> données) {
-		e.setDonnées(données);
+	public static void modifierVoeux(Voeux e, Hashtable<String, String> donnees) {
+		e.setDonnees(donnees);
 	}
 	
 	/* Attributs voeux */
@@ -622,23 +622,23 @@ public class Controleur {
 		return Voeux.getAttributs();
 	}
 
-	/* Voeux d'un sujet classé par position */
-	public static ArrayList<Voeux> voeuxSujetClassés(String sujet) {
-		ArrayList<Voeux> résultat = new ArrayList<Voeux>();
+	/* Voeux d'un sujet classe par position */
+	public static ArrayList<Voeux> voeuxSujetClasses(String sujet) {
+		ArrayList<Voeux> resultat = new ArrayList<Voeux>();
 		
 		for(int i=0;i<listeVoeux.size();i++) {
-			if(listeVoeux.get(i).getDonnées().get("sujet").equals(sujet)) {
-				résultat.add(listeVoeux.get(i));
+			if(listeVoeux.get(i).getDonnees().get("sujet").equals(sujet)) {
+				resultat.add(listeVoeux.get(i));
 			}
 		}
 		
-		résultat.sort(new ComparateurDeVoeux());
+		resultat.sort(new ComparateurDeVoeux());
 		
-		return résultat;
+		return resultat;
 	}
 	
-	/* Préaffectation des sujets */
-	public static void préaffectationSujets() {
+	/* Preaffectation des sujets */
+	public static void preaffectationSujets() {
 		ArrayList<String> tousLesGroupes = new ArrayList<String>();
 		ArrayList<String> groupesAvecSujet = new ArrayList<String>();
 		ArrayList<String> sujetsDejaPris = new ArrayList<String>();
@@ -646,16 +646,16 @@ public class Controleur {
 		ArrayList<Voeux> listeDesVoeux = (ArrayList<Voeux>)listeVoeux.clone();
 		ArrayList<String> groupesSansSujet = new ArrayList<String>();
 		
-		/* On récupère tous les groupes */
+		/* On recupère tous les groupes */
 		for(int i=0;i<listeEtudiants.size();i++) {
-			tousLesGroupes.add(listeEtudiants.get(i).getDonnées().get("groupe"));
+			tousLesGroupes.add(listeEtudiants.get(i).getDonnees().get("groupe"));
 		}
 		
-		/* On récupèe les groupes ayant déjà un sujet et les sujets déjà pris */
+		/* On recupèe les groupes ayant dejà un sujet et les sujets dejà pris */
 		
 		for(int i=0;i<listeProjets.size();i++) {
-			groupesAvecSujet.add(listeProjets.get(i).getDonnées().get("groupe"));
-			sujetsDejaPris.add(listeProjets.get(i).getDonnées().get("sujet"));
+			groupesAvecSujet.add(listeProjets.get(i).getDonnees().get("groupe"));
+			sujetsDejaPris.add(listeProjets.get(i).getDonnees().get("sujet"));
 		}
 		
 		groupesSansSujet = tousLesGroupes;
@@ -675,7 +675,7 @@ public class Controleur {
 			String groupe = groupesSansSujet.get(i);
 			
 			for(int j=0;j<listeDesVoeux.size();j++) {
-				Hashtable<String, String> voeu = listeDesVoeux.get(j).getDonnées();
+				Hashtable<String, String> voeu = listeDesVoeux.get(j).getDonnees();
 				
 				if(voeu.get("groupe").equals(groupe)
 						&& !sujetsDejaPris.contains(voeu.get("sujet"))
@@ -684,7 +684,7 @@ public class Controleur {
 				}
 			}
 
-			String sujetPris = listeDesVoeux.get(indiceMeilleurVoeu).getDonnées().get("sujet");
+			String sujetPris = listeDesVoeux.get(indiceMeilleurVoeu).getDonnees().get("sujet");
 			if(indiceMeilleurVoeu != 0) {
 				sujetsDejaPris.add(sujetPris);
 				

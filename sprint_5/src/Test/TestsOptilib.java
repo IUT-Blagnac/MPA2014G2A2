@@ -41,7 +41,7 @@ public class TestsOptilib extends TestCase {
 		if(tableau[0].get("Atr4").equals("Val4")) {
 			nbTestsOk++;
 		} else {
-			System.err.println("Erreur : Reader ne lit pas tous les éléments");
+			System.err.println("Erreur : Reader ne lit pas tous les elements");
 		}
 	}
 	
@@ -54,7 +54,7 @@ public class TestsOptilib extends TestCase {
 		etudiant.put("prenom", "Balthazar");
 		
 		Controleur.initCsv();
-		Controleur.entrés.put("Etudiants", "test_data/test4.csv");
+		Controleur.entres.put("Etudiants", "test_data/test4.csv");
 		Controleur.importer();
 		Controleur.sorties.put("Etudiants", "test_data/test3.csv");
 		Controleur.ajouterEtudiant(etudiant);
@@ -75,7 +75,7 @@ public class TestsOptilib extends TestCase {
 
 	public static void main(String[] args) {
 	    junit.textui.TestRunner.run(new TestSuite(TestsOptilib.class));
-	    System.out.println(nbTestsOk+"/"+nbTestsTotal+" tests validés.");
+	    System.out.println(nbTestsOk+"/"+nbTestsTotal+" tests valides.");
 	}
 
 }

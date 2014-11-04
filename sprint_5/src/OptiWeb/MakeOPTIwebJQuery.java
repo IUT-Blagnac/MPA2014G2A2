@@ -52,8 +52,8 @@ public class MakeOPTIwebJQuery {
 			sortie.write(" <!-- DEBUT page accueil --> \n ");
 			sortie.write(" <div data-role=\"page\" id=\"accueil\" data-title=\"OPTIweb - V0.1\">  \n ");
 			sortie.write("  <div data-role=\"header\" data-add-back-btn=\"true\">  \n ");
-			sortie.write("  <h1>P<span class=\"landscape\">rojets </span>tut<span class=\"landscape\">orés</span> 2014-2015<br/>Département INFO<span class=\"landscape\">RMATIQUE</span><br/>IUT de Blagnac</h1> \n ");
-			sortie.write("  <a href=\"#credits\" data-theme=\"b\" class=\"ui-btn-right\">Crédits</a> \n ");
+			sortie.write("  <h1>P<span class=\"landscape\">rojets </span>tut<span class=\"landscape\">ores</span> 2014-2015<br/>Departement INFO<span class=\"landscape\">RMATIQUE</span><br/>IUT de Blagnac</h1> \n ");
+			sortie.write("  <a href=\"#credits\" data-theme=\"b\" class=\"ui-btn-right\">Credits</a> \n ");
 			sortie.write("  </div> \n ");
 			sortie.write(" <div data-role=\"content\"> \n ");
 			sortie.write("  <ul data-role=\"listview\" data-inset=\"true\" id=\"listeSources\">\n ");
@@ -71,24 +71,24 @@ public class MakeOPTIwebJQuery {
 			
 			
 			sortie.write("<!-- DEBUT page credits --> \n ");
-			sortie.write(" <div data-role=\"page\" id=\"credits\" data-title=\"OPTIweb - V0.1 - Crédits\"> \n ");
+			sortie.write(" <div data-role=\"page\" id=\"credits\" data-title=\"OPTIweb - V0.1 - Credits\"> \n ");
 			sortie.write(" <div data-role=\"header\" data-add-back-btn=\"true\"> \n ");
-			sortie.write(" <h1>Crédits</h1> \n ");
+			sortie.write(" <h1>Credits</h1> \n ");
 			sortie.write(" </div> \n ");
 			sortie.write(" <div data-role=\"content\"> \n ");
-			sortie.write("  <p>Cette application a été réalisée dans le cadre du module M3301/MPA du DUT Informatique à l'IUT de Blagnac.</p> " );
+			sortie.write("  <p>Cette application a ete realisee dans le cadre du module M3301/MPA du DUT Informatique à l'IUT de Blagnac.</p> " );
 			sortie.write(" <ul data-role=\"listview\" data-inset=\"true\" id=\"contacts\" data-theme=\"a\" data-divider-theme=\"b\"> \n ");
 			sortie.write(" <li data-role=\"list-divider\">Product Owner</li> \n ");
-			sortie.write(" <li>André PÉNINOU</li>\n ");
-			sortie.write(" <li>Université Toulouse 2 - IUT de Blagnac\n ");
-			sortie.write(" <br/>Département INFORMATIQUE</li> \n ");
+			sortie.write(" <li>Andre PeNINOU</li>\n ");
+			sortie.write(" <li>Universite Toulouse 2 - IUT de Blagnac\n ");
+			sortie.write(" <br/>Departement INFORMATIQUE</li> \n ");
 			sortie.write(" </ul> \n ");
 			sortie.write(" <ul data-role=\"listview\" data-inset=\"true\" id=\"listecredits\" data-theme=\"a\" data-divider-theme=\"b\">\n ");
-			sortie.write(" <li data-role=\"list-divider\">Membres de l'équipe enseignante</li> \n ");
-			sortie.write(" <li>Jean-Michel BRUEL</li><li>Jean-Michel INGLEBERT</li><li>André PÉNINOU</li><li>Olivier ROQUES</li>\n ");
+			sortie.write(" <li data-role=\"list-divider\">Membres de l'equipe enseignante</li> \n ");
+			sortie.write(" <li>Jean-Michel BRUEL</li><li>Jean-Michel INGLEBERT</li><li>Andre PeNINOU</li><li>Olivier ROQUES</li>\n ");
 			sortie.write(" </ul> \n ");
 			sortie.write(" <ul data-role=\"listview\" data-inset=\"true\" id=\"listepowered\" data-theme=\"a\" data-divider-theme=\"b\"> \n ");
-			sortie.write("  <li data-role=\"list-divider\">Propulsé par</li>\n ");
+			sortie.write("  <li data-role=\"list-divider\">Propulse par</li>\n ");
 			sortie.write(" <li><a href=\"http://jquerymobile.com/\" target=\"autrePage\">http://jquerymobile.com/</a></li>\n ");
 			sortie.write("  <li><a href=\"http://fortawesome.github.io/Font-Awesome/\" target=\"autrePage\">http://fortawesome.github.io/Font-Awesome/</a></li>\n ");
 			sortie.write("</ul> \n ");

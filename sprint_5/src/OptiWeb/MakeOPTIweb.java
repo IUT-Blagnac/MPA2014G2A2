@@ -21,10 +21,10 @@ public class MakeOPTIweb {
 	public static void generator(/*String projets, String sujets, String etudiants, String intervenants*/) {
 		Controleur.initCsv();
 		
-		/*Controleur.entrés.put("Projets", projets);
-		Controleur.entrés.put("Sujets", sujets);
-		Controleur.entrés.put("Etudiants", etudiants);
-		Controleur.entrés.put("Intervenants", intervenants);*/
+		/*Controleur.entres.put("Projets", projets);
+		Controleur.entres.put("Sujets", sujets);
+		Controleur.entres.put("Etudiants", etudiants);
+		Controleur.entres.put("Intervenants", intervenants);*/
 		
 		Controleur.importer();
 		
@@ -32,7 +32,7 @@ public class MakeOPTIweb {
 		String adresse_javascript = "javascript.js";
 		String adresse_css = "style.css";
 		
-		String titre = "P<span class=\"landscape\">rojets </span>tut<span class=\"landscape\">orés</span> 2014-2015<br/>Département INFO<span class=\"landscape\">RMATIQUE</span><br/>IUT de Blagnac";
+		String titre = "P<span class=\"landscape\">rojets </span>tut<span class=\"landscape\">ores</span> 2014-2015<br/>Departement INFO<span class=\"landscape\">RMATIQUE</span><br/>IUT de Blagnac";
 		String version = "0.1";
 		String javascript = "";
 		String css = "";
@@ -84,7 +84,7 @@ public class MakeOPTIweb {
 					sortie_html.write("<h1 class=\"titre\">\n");
 						sortie_html.write(titre);
 					sortie_html.write("</h1>\n");
-					sortie_html.write("<a href=\"javascript:changer_page('credits');\" class=\"bouton\">Crédits</a>\n");
+					sortie_html.write("<a href=\"javascript:changer_page('credits');\" class=\"bouton\">Credits</a>\n");
 				sortie_html.write("</div>\n");
 				
 				sortie_html.write("<div class=\"contenu\">\n");
@@ -111,7 +111,7 @@ public class MakeOPTIweb {
 			sortie_html.write("<div class=\"page\" id=\"credits\" style=\"display:none;\">\n");
 				sortie_html.write("<div class=\"header\">\n");
 					sortie_html.write("<h1 class=\"titre\">\n");
-						sortie_html.write("Crédits\n");
+						sortie_html.write("Credits\n");
 					sortie_html.write("</h1>\n");
 					sortie_html.write("<a href=\"javascript:changer_page('accueil');\" class=\"bouton2\"><i class=\"icon_retour\"></i> Retour</a>\n");
 				sortie_html.write("</div>\n");
@@ -119,20 +119,20 @@ public class MakeOPTIweb {
 				/* Contenu */
 				sortie_html.write("<div class=\"contenu\">\n");
 
-					sortie_html.write("<p>Cette application a été réalisée dans le cadre du module M3301/MPA du DUT Informatique à l'IUT de Blagnac.</p>\n");
+					sortie_html.write("<p>Cette application a ete realisee dans le cadre du module M3301/MPA du DUT Informatique à l'IUT de Blagnac.</p>\n");
 				
 					sortie_html.write(
 							"<ul class=\"liste2\">\n" +
 							"<li class=\"liste_titre\">Product Owner</li>\n" +
-							"<li>André PÉNINOU</li>\n" +
-							"<li>Université Toulouse 2 - IUT de Blagnac<br />Département INFORMATIQUE</li>\n" +
+							"<li>Andre PeNINOU</li>\n" +
+							"<li>Universite Toulouse 2 - IUT de Blagnac<br />Departement INFORMATIQUE</li>\n" +
 							"</ul>\n"
 							);
 					
 					sortie_html.write(
 							"<ul class=\"liste2\">\n" +
 							"<li class=\"liste_titre\">Membres du groupe</li>\n" +
-							"<li>LOPEZ Nathan <i>Développeur suprème & chef de projet</i></li>\n" +
+							"<li>LOPEZ Nathan <i>Developpeur suprème & chef de projet</i></li>\n" +
 							"<li>ERB Alexandre <i>Doc'eur en herbe</i></li>\n" +
 							"<li>SANTACANA Nathan <i>Expert en test</i></li>\n" +
 							"<li>COLLIGNON Benjamin <i>Interfaceur graphique</i></li>\n" +
@@ -143,10 +143,10 @@ public class MakeOPTIweb {
 					
 					sortie_html.write(
 							"<ul class=\"liste2\">\n" +
-							"<li class=\"liste_titre\">Propulsé par</li>\n" +
+							"<li class=\"liste_titre\">Propulse par</li>\n" +
 							"<li>Nathan LOPEZ's brain</li>\n" +
 							"<li>NEVER Jquery</li>\n" +
-							"<li>Notre application contient 34161 caractères, la même application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus légère. Notre application ne nécessite pas de connexion internet.</li>\n" +
+							"<li>Notre application contient 34161 caractères, la même application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus legère. Notre application ne necessite pas de connexion internet.</li>\n" +
 							"</ul>\n"
 							);
 				
@@ -179,34 +179,34 @@ public class MakeOPTIweb {
 					sortie_html.write("<ul id=\"listeprojets\" style=\"border-radius:10px;\" class=\"liste3\">\n");
 						
 						for(int i=0;i<Controleur.getProjets().size();i++) {
-							Sujets sujet = Controleur.findSujet(Controleur.getProjets().get(i).getDonnées().get("sujet"));
-							Intervenants client = Controleur.findIntervenant(Controleur.getProjets().get(i).getDonnées().get("client"));
-							Intervenants superviseur = Controleur.findIntervenant(Controleur.getProjets().get(i).getDonnées().get("superviseur"));
-							ArrayList<Etudiants> etudiantsG = Controleur.getEtudiantsGroupe(Controleur.getProjets().get(i).getDonnées().get("groupe"));
+							Sujets sujet = Controleur.findSujet(Controleur.getProjets().get(i).getDonnees().get("sujet"));
+							Intervenants client = Controleur.findIntervenant(Controleur.getProjets().get(i).getDonnees().get("client"));
+							Intervenants superviseur = Controleur.findIntervenant(Controleur.getProjets().get(i).getDonnees().get("superviseur"));
+							ArrayList<Etudiants> etudiantsG = Controleur.getEtudiantsGroupe(Controleur.getProjets().get(i).getDonnees().get("groupe"));
 							
 							String cli_pre = "", cli_nom = "", sup_pre = "", sup_nom = "";
 							
 							if(client != null) {
-								cli_pre = client.getDonnées().get("prenom");
-								cli_nom = client.getDonnées().get("nom");
+								cli_pre = client.getDonnees().get("prenom");
+								cli_nom = client.getDonnees().get("nom");
 							}
 							
 							if(superviseur != null) {
-								sup_pre = client.getDonnées().get("prenom");
-								sup_nom = client.getDonnées().get("nom");
+								sup_pre = client.getDonnees().get("prenom");
+								sup_nom = client.getDonnees().get("nom");
 							}
 							
 							sortie_html.write(
 									"<li id=\"p" + i + "\">\n"+
-									"<p><b>[" + sujet.getDonnées().get("nom") + "]</b> " + sujet.getDonnées().get("titre") + "</p>\n"+
+									"<p><b>[" + sujet.getDonnees().get("nom") + "]</b> " + sujet.getDonnees().get("titre") + "</p>\n"+
 									"<p><b>Client :</b> " + cli_nom + " " + cli_pre + "</p><p><b>Superviseur :</b> " + sup_nom + " " + sup_pre + "</p><p>\n"+
-									"<b>Groupe " + Controleur.getProjets().get(i).getDonnées().get("groupe") + " :</b> \n"
+									"<b>Groupe " + Controleur.getProjets().get(i).getDonnees().get("groupe") + " :</b> \n"
 								);
 							
 							for(int j=0; j<etudiantsG.size();j++) {
-								sortie_html.write(etudiantsG.get(j).getDonnées().get("prenom") +
+								sortie_html.write(etudiantsG.get(j).getDonnees().get("prenom") +
 										" " +
-										etudiantsG.get(j).getDonnées().get("nom") +
+										etudiantsG.get(j).getDonnees().get("nom") +
 										" - "
 									);
 							}
@@ -251,8 +251,8 @@ public class MakeOPTIweb {
 						String g = "";
 						
 						for(int k=0;k<p.size();k++) {
-							if(p.get(k).getDonnées().get("sujet").equals(s.getDonnées().get("id"))) {
-								g = p.get(k).getDonnées().get("groupe");
+							if(p.get(k).getDonnees().get("sujet").equals(s.getDonnees().get("id"))) {
+								g = p.get(k).getDonnees().get("groupe");
 							}
 						}
 						
@@ -260,7 +260,7 @@ public class MakeOPTIweb {
 							g = "N O";
 						}
 						
-						sortie_html.write("<li id=\"s" + j + "\"><a href=\"javascript:projet('" + s.getDonnées().get("nom") + "');\">[" + s.getDonnées().get("nom") + "] <br/>" + s.getDonnées().get("titre") + "<b /><span class=\"groupe\">" + g + "</span></a></li>\n");
+						sortie_html.write("<li id=\"s" + j + "\"><a href=\"javascript:projet('" + s.getDonnees().get("nom") + "');\">[" + s.getDonnees().get("nom") + "] <br/>" + s.getDonnees().get("titre") + "<b /><span class=\"groupe\">" + g + "</span></a></li>\n");
 					}
 					
 					sortie_html.write("</ul>\n");
@@ -295,7 +295,7 @@ public class MakeOPTIweb {
 							"<li class=\"liste_titre\">Etudiant <span class=\"groupe\" style=\"color: #333;\">Groupe</span></li>\n");
 
 					for(int j=0;j<Controleur.getEtudiants().size();j++) {
-						Hashtable<String, String> e = Controleur.getEtudiants().get(j).getDonnées();
+						Hashtable<String, String> e = Controleur.getEtudiants().get(j).getDonnees();
 						
 						sortie_html.write("<li id=\"e" + j + "\"><a href=\"javascript:projet('" + e.get("prenom") + " " + e.get("nom") + "');\">" + e.get("nom") + " " + e.get("prenom") + "<span class=\"groupe\">Groupe " + e.get("groupe") + "</span></a></li>\n");
 					}
@@ -332,7 +332,7 @@ public class MakeOPTIweb {
 							"<li class=\"liste_titre\">Intervenant <div class=\"div_droite\"><span class=\"role\" style=\"color: #333;\">Client</span></div><div class=\"div_droite\"><span class=\"role\" style=\"color: #333;\">Superviseur</span></div></li>\n");
 
 					for(int j=0;j<Controleur.getIntervenants().size();j++) {
-						Hashtable<String, String> e = Controleur.getIntervenants().get(j).getDonnées();
+						Hashtable<String, String> e = Controleur.getIntervenants().get(j).getDonnees();
 						Object[][] tab_roles = Controleur.intervenantPlus(Controleur.getIntervenants().get(j));
 						
 						int client = 0, superviseur = 0;

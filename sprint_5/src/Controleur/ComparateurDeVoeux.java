@@ -11,7 +11,7 @@ public class ComparateurDeVoeux implements Comparator<Voeux> {
 
 	@Override
 	public int compare(Voeux v1, Voeux v2) {
-		if(Integer.parseInt(v1.getDonnées().get("position")) < Integer.parseInt(v2.getDonnées().get("position"))) {
+		if(Integer.parseInt(v1.getDonnees().get("position")) < Integer.parseInt(v2.getDonnees().get("position"))) {
 			return -1;
 		} else {
 			return 1;

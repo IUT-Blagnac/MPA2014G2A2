@@ -27,11 +27,11 @@ public class AffichageProj {
 	private static ArrayList<Projets> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de créer un JPanel comportant des infos sur les projets et l'accès aux différentes fonctionalités sur les projets.
+	 * Permet de creer un JPanel comportant des infos sur les projets et l'accès aux differentes fonctionalites sur les projets.
 	 * @param pliste La liste comportant les projets à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPannel qui sera retourné.
-	 * @return Un JPanel comportant des infos sur les projets et l'accès aux différentes fonctionalités sur les projets.
+	 * @param pparent La fenetre mère du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les projets et l'accès aux differentes fonctionalites sur les projets.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Projets> pliste,final String[]entetes, JFrame pparent){
 		parent = pparent;
@@ -44,7 +44,7 @@ public class AffichageProj {
 			ArrayList<Projets> temp = new ArrayList<Projets>();
 			
 			for(int i=0;i<liste.size();i++){
-				if(liste.get(i).getDonnées().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
+				if(liste.get(i).getDonnees().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
 					temp.add(liste.get(i));
 				}	
 			}
@@ -78,7 +78,7 @@ public class AffichageProj {
 		String temp="";
 		for(int i=0;i<liste.size();i++){
 			for(int j=0;j<entetes.length;j++){
-				temp=liste.get(i).getDonnées().get(entetes[j]);
+				temp=liste.get(i).getDonnees().get(entetes[j]);
 				date[i][j]=temp;	
 			}	
 		}
@@ -121,12 +121,12 @@ public class AffichageProj {
 	                int index= table.getSelectedRow();
 	                if ( index != -1 ){ //si un ligne est selectionner :
 	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de dupliquer le projets <FONT COLOR=\"red\">"+
-	                			liste.get(index).getDonnées().get("groupe")+" "+
-	                			liste.get(index).getDonnées().get("sujet")+
+	                			liste.get(index).getDonnees().get("groupe")+" "+
+	                			liste.get(index).getDonnees().get("sujet")+
 	                															"</font> de la liste.<br>Continuer ?</html>","Dupplication",JOptionPane.YES_NO_OPTION)){
 	                		Object[]rowData = new Object[entetes.length];
 	                		for(int i=0;i<entetes.length;i++){
-	                			rowData[i]=liste.get(index).getDonnées().get(entetes[i]);
+	                			rowData[i]=liste.get(index).getDonnees().get(entetes[i]);
 	                		}
 	                		model.addRow(rowData);
 	                		model.fireTableDataChanged();
@@ -142,14 +142,14 @@ public class AffichageProj {
 		//action sur le bouton ajout
 		ajout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Hashtable<String, String> données = new Hashtable<String, String>();
+				Hashtable<String, String> donnees = new Hashtable<String, String>();
 				
 				String[] attributs = Controleur.attributProjet();
 				for(int k=0;k<attributs.length;k++) {
-					données.put(attributs[k], "");
+					donnees.put(attributs[k], "");
 				}
 								
-				Enregistrement nouveauProj = new Enregistrement(données, parent, "Ajouter un projet", "projet");
+				Enregistrement nouveauProj = new Enregistrement(donnees, parent, "Ajouter un projet", "projet");
 			}
 		});
 		
@@ -159,8 +159,8 @@ public class AffichageProj {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si un ligne est selectionner :
                 	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer le projets <FONT COLOR=\"red\">"+
-                			liste.get(index).getDonnées().get("groupe")+" "+
-                			liste.get(index).getDonnées().get("sujet")+
+                			liste.get(index).getDonnees().get("groupe")+" "+
+                			liste.get(index).getDonnees().get("sujet")+
                 															"</FONT> de la liste.<br>Continuer?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
                 		model.removeRow(index);
                 		model.fireTableDataChanged();
@@ -178,7 +178,7 @@ public class AffichageProj {
 			public void actionPerformed(ActionEvent arg) {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si une ligne est selectionner :
-                	Enregistrement modifInt = new Enregistrement(liste.get(index).getDonnées(), parent, "Modifier un projet");
+                	Enregistrement modifInt = new Enregistrement(liste.get(index).getDonnees(), parent, "Modifier un projet");
                 }else{ //sinon, message d'erreur
                 	JOptionPane.showMessageDialog(null, "Veuillez selestionner un projet svp");	
                 }  

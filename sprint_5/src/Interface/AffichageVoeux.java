@@ -32,10 +32,10 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 	private static ArrayList<Voeux> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de créer un JPanel comportant des infos sur les voeux et l'accès aux différentes fonctionalités sur les voeux.
+	 * Permet de creer un JPanel comportant des infos sur les voeux et l'accès aux differentes fonctionalites sur les voeux.
 	 * @param pliste La liste comportant les voeux à afficher.
-	 * @param p_parent La fenetre mère du JPannel qui sera retourné.
-	 * @return Un JPanel comportant des infos sur les voeux et l'accès aux différentes fonctionalités sur les voeux.
+	 * @param p_parent La fenetre mère du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les voeux et l'accès aux differentes fonctionalites sur les voeux.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Voeux> pliste, JFrame p_parent){
 		parent = p_parent;
@@ -48,7 +48,7 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 			ArrayList<Voeux> temp = new ArrayList<Voeux>();
 			
 			for(int i=0;i<liste.size();i++){
-				if(liste.get(i).getDonnées().get(attribut).equals(valeur)) {
+				if(liste.get(i).getDonnees().get(attribut).equals(valeur)) {
 					temp.add(liste.get(i));
 				}	
 			}
@@ -78,18 +78,18 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 		final JButton supRechercher = new JButton("Annuler la recherche");
 		final JButton classer = new JButton("Classer les voeux pour ce sujet");
 		final JButton supClasser = new JButton("Supprimer le classement");
-		final JButton preaffecter = new JButton("Pré-affecter les sujets");
+		final JButton preaffecter = new JButton("Pre-affecter les sujets");
 		
-		//stocke les info sur les étudiant dans un tableau d'object
+		//stocke les info sur les etudiant dans un tableau d'object
 		Object[][] data= new Object[liste.size()][entete.length+1];
 		String temp="";
 		for(int i=0;i<liste.size();i++){
 			for(int j=0;j<entete.length;j++){
-				temp=liste.get(i).getDonnées().get(entete[j]);
+				temp=liste.get(i).getDonnees().get(entete[j]);
 				data[i][j]=temp;
 			}
 		}
-		//creation d'un table contenants les infos sur les étudiant ( groupe,nom,prenom)
+		//creation d'un table contenants les infos sur les etudiant ( groupe,nom,prenom)
 		final DefaultTableModel model= new DefaultTableModel(data,entete);
 		final JTable table= new JTable(model){
 			//redefinition de la methode isCelleEditable pour empecher la modification des cellule
@@ -108,14 +108,14 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 		table.setVisible(true);
 		panComplet.add(panEntete);
 		
-		//suppression d'un étudiant
+		//suppression d'un etudiant
 		buttonRemRow.addActionListener(new ActionListener() {
 	            public void actionPerformed(final ActionEvent e) {
 	                int index= table.getSelectedRow();
 	                if ( index != -1 ){ //si une ligne est selectionner :
 	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer <FONT COLOR=\"red\">"+ 
-	                																liste.get(index).getDonnées().get("nom")+" "+ 
-	                																liste.get(index).getDonnées().get("prenom")+
+	                																liste.get(index).getDonnees().get("nom")+" "+ 
+	                																liste.get(index).getDonnees().get("prenom")+
 	                																"</FONT> de la liste.<br>Continuer ?</html>","suppression",JOptionPane.YES_NO_OPTION)){
 	                		model.removeRow(index);
 	                		model.fireTableDataChanged();
@@ -128,17 +128,17 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 	            }
 	        });
 		
-		//ajout d'un étudiant --> a implémenter
+		//ajout d'un etudiant --> a implementer
 		buttonAddRow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Hashtable<String, String> données = new Hashtable<String, String>();
+				Hashtable<String, String> donnees = new Hashtable<String, String>();
 				
 				String[] attributs = Controleur.attributVoeux();
 				for(int k=0;k<attributs.length;k++) {
-					données.put(attributs[k], "");
+					donnees.put(attributs[k], "");
 				}
 								
-				Enregistrement nouveauVoeu = new Enregistrement(données, parent, "Ajouter un voeu", "voeu");
+				Enregistrement nouveauVoeu = new Enregistrement(donnees, parent, "Ajouter un voeu", "voeu");
 			}
 		});
 		
@@ -146,7 +146,7 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 			public void actionPerformed(ActionEvent arg) {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si une ligne est selectionner :
-                	Enregistrement modifVoeu = new Enregistrement(liste.get(index).getDonnées(), parent, "Modifier un voeu");
+                	Enregistrement modifVoeu = new Enregistrement(liste.get(index).getDonnees(), parent, "Modifier un voeu");
                 }else{ //sinon, message d'erreur
                 	JOptionPane.showMessageDialog(null, "Veuillez selectionner un voeu");	
                 }  
@@ -157,7 +157,7 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 			public void actionPerformed(ActionEvent arg) {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si une ligne est selectionner :
-                	liste=Controleur.voeuxSujetClassés(table.getValueAt(table.getSelectedRow(),1).toString());
+                	liste=Controleur.voeuxSujetClasses(table.getValueAt(table.getSelectedRow(),1).toString());
                 	FenetrePrincipale.getOnglet().remove(5);
                 	FenetrePrincipale.getOnglet().add(AffichageVoeux.affiJPanel(liste, FenetrePrincipale.getFenetre()), "Voeux");
                 	FenetrePrincipale.getOnglet().setSelectedIndex(5);
@@ -175,7 +175,7 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 		
 		preaffecter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg) {
-                Controleur.préaffectationSujets();
+                Controleur.preaffectationSujets();
                 FenetrePrincipale.Maj();
 			}
 		});

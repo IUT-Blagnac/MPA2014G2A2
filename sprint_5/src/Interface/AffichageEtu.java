@@ -31,11 +31,11 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 	private static ArrayList<Etudiants> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de créer un JPanel comportant des infos sur les etudiants et l'accès aux différentes fonctionalités sur les etudiants.
+	 * Permet de creer un JPanel comportant des infos sur les etudiants et l'accès aux differentes fonctionalites sur les etudiants.
 	 * @param pliste La liste comportant les Etudiants à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPanel qui sera retourné.
-	 * @return Le JPanel comportant les infos sur les etudiants et l'accès aux différentes fonctionalités.
+	 * @param pparent La fenetre mère du JPanel qui sera retourne.
+	 * @return Le JPanel comportant les infos sur les etudiants et l'accès aux differentes fonctionalites.
 	 */
 	public static JPanel affiJPanel(ArrayList<Etudiants> pliste, final String[] entetes, JFrame pparent){
 		parent = pparent;
@@ -48,7 +48,7 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 			ArrayList<Etudiants> temp = new ArrayList<Etudiants>();
 			
 			for(int i=0;i<liste.size();i++){
-				if(liste.get(i).getDonnées().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
+				if(liste.get(i).getDonnees().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
 					temp.add(liste.get(i));
 				}	
 			}
@@ -69,23 +69,23 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 		panBouton.setLayout(new FlowLayout());
 		
 		//creation des boutons ajout et supprimer
-		final JButton buttonRemRow = new JButton("Supprimer l'étudiant");
-		final JButton buttonAddRow = new JButton("Ajouter un étudiant");
-		final JButton buttonEditRow = new JButton("Modifier l'étudiant");
+		final JButton buttonRemRow = new JButton("Supprimer l'etudiant");
+		final JButton buttonAddRow = new JButton("Ajouter un etudiant");
+		final JButton buttonEditRow = new JButton("Modifier l'etudiant");
 		final JButton afficherGroupe = new JButton("Afficher le groupe");
 		final JButton rechercher = new JButton("Rechercher");
 		final JButton supRechercher = new JButton("Annuler la recherche");
 		
-		//stocke les info sur les étudiant dans un tableau d'object
+		//stocke les info sur les etudiant dans un tableau d'object
 		Object [][]date= new Object[liste.size()][entetes.length+1];
 		String temp="";
 		for(int i=0;i<liste.size();i++){
 			for(int j=0;j<entetes.length;j++){
-				temp=liste.get(i).getDonnées().get(entetes[j]);
+				temp=liste.get(i).getDonnees().get(entetes[j]);
 				date[i][j]=temp;
 			}
 		}
-		//creation d'un table contenants les infos sur les étudiant ( groupe,nom,prenom)
+		//creation d'un table contenants les infos sur les etudiant ( groupe,nom,prenom)
 		final DefaultTableModel model= new DefaultTableModel(date,entetes);
 		final JTable table= new JTable(model){
 			//redefinition de la methode isCelleEditable pour empecher la modification des cellule
@@ -104,14 +104,14 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 		table.setVisible(true);
 		panComplet.add(panEntete);
 		
-		//suppression d'un étudiant
+		//suppression d'un etudiant
 		buttonRemRow.addActionListener(new ActionListener() {
 	            public void actionPerformed(final ActionEvent e) {
 	                int index= table.getSelectedRow();
 	                if ( index != -1 ){ //si une ligne est selectionner :
 	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer <FONT COLOR=\"red\">"+ 
-	                																liste.get(index).getDonnées().get("nom")+" "+ 
-	                																liste.get(index).getDonnées().get("prenom")+
+	                																liste.get(index).getDonnees().get("nom")+" "+ 
+	                																liste.get(index).getDonnees().get("prenom")+
 	                																"</FONT> de la liste.<br>Continuer ?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
 	                		model.removeRow(index);
 	                		model.fireTableDataChanged();
@@ -119,7 +119,7 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 	                	}
 	                	//modifier le fichier csv
 	                }else{ //sinon, message d'erreur
-	                	JOptionPane.showMessageDialog(null, "Veuillez sélectionner un étudiant svp");	
+	                	JOptionPane.showMessageDialog(null, "Veuillez selectionner un etudiant svp");	
 	                }  
 	            }
 	        });
@@ -132,22 +132,22 @@ public class AffichageEtu extends DefaultTableCellRenderer{
                 	AffichageGroupe.getJBouton()[indiceGroupe(table)].doClick();
                 		  	
                 }else{ //sinon, message d'erreur
-                	JOptionPane.showMessageDialog(null, "Veuillez sélectionner un étudiant svp");	
+                	JOptionPane.showMessageDialog(null, "Veuillez selectionner un etudiant svp");	
                 }  
             }
         });
 		
-		//ajout d'un étudiant --> a implémenter
+		//ajout d'un etudiant --> a implementer
 		buttonAddRow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Hashtable<String, String> données = new Hashtable<String, String>();
+				Hashtable<String, String> donnees = new Hashtable<String, String>();
 				
 				String[] attributs = Controleur.attributEtudiant();
 				for(int k=0;k<attributs.length;k++) {
-					données.put(attributs[k], "");
+					donnees.put(attributs[k], "");
 				}
 								
-				Enregistrement nouveauEtudiant = new Enregistrement(données, parent, "Ajouter un étudiant", "etudiant");
+				Enregistrement nouveauEtudiant = new Enregistrement(donnees, parent, "Ajouter un etudiant", "etudiant");
 			}
 		});
 		
@@ -155,9 +155,9 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 			public void actionPerformed(ActionEvent arg) {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si une ligne est selectionner :
-                	Enregistrement modifEtudiant = new Enregistrement(liste.get(index).getDonnées(), parent, "Modifier un étudiant");
+                	Enregistrement modifEtudiant = new Enregistrement(liste.get(index).getDonnees(), parent, "Modifier un etudiant");
                 }else{ //sinon, message d'erreur
-                	JOptionPane.showMessageDialog(null, "Veuillez sélectionner un étudiant svp");	
+                	JOptionPane.showMessageDialog(null, "Veuillez selectionner un etudiant svp");	
                 }  
 			}
 		});
@@ -194,8 +194,8 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 		return panComplet;
 	}
 	/**
-	 * Permet d'obtenir l'indice d'un groupe en fonction de l'etudiant selectionné.
-	 * @param table La JTable comportant les infos sur un étudiant.
+	 * Permet d'obtenir l'indice d'un groupe en fonction de l'etudiant selectionne.
+	 * @param table La JTable comportant les infos sur un etudiant.
 	 * @return
 	 */
 	public static int indiceGroupe(JTable table){

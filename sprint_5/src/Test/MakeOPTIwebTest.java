@@ -39,7 +39,7 @@ public class MakeOPTIwebTest extends TestCase {
 	public static void main(String[] args) {
 
 		junit.textui.TestRunner.run(new TestSuite(MakeOPTIwebTest.class));
-		System.out.println(nbTestsOk + "/" + nbTestsTotal + " tests validés.");
+		System.out.println(nbTestsOk + "/" + nbTestsTotal + " tests valides.");
 	}
 
 }

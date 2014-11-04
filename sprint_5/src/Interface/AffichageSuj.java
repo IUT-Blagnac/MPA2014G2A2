@@ -40,11 +40,11 @@ public class AffichageSuj {
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	
 	/**
-	 * Permet de créer un JPanel comportant des infos sur les sujets et l'accès aux différentes fonctionalités sur les sujets.
+	 * Permet de creer un JPanel comportant des infos sur les sujets et l'accès aux differentes fonctionalites sur les sujets.
 	 * @param pliste La liste comportant les sujets à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPannel qui sera retourné.
-	 * @return Un JPanel comportant des infos sur les sujets et l'accès aux différentes fonctionalités sur les sujets.
+	 * @param pparent La fenetre mère du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les sujets et l'accès aux differentes fonctionalites sur les sujets.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Sujets> pliste,final String[]entetes, JFrame pparent) {
 		parent = pparent;
@@ -57,7 +57,7 @@ public class AffichageSuj {
 			ArrayList<Sujets> temp = new ArrayList<Sujets>();
 			
 			for(int i=0;i<liste.size();i++){
-				if(liste.get(i).getDonnées().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
+				if(liste.get(i).getDonnees().get(attribut).toLowerCase().contains(valeur.toLowerCase())) {
 					temp.add(liste.get(i));
 				}	
 			}
@@ -141,7 +141,7 @@ public class AffichageSuj {
 		
 		for (int i = 0; i < liste.size(); i++) {
 			
-			bouton[i] = new JButton(liste.get(i).getDonnées().get("nom"));
+			bouton[i] = new JButton(liste.get(i).getDonnees().get("nom"));
 			bouton[i].setBackground(new Color(200,221,242));
 			bouton[i].setPreferredSize(new Dimension(180,30));
 			
@@ -189,7 +189,7 @@ public class AffichageSuj {
 		petitCentre.setLayout(new BoxLayout(petitCentre, BoxLayout.PAGE_AXIS));
 
 		sujet.setBackground(new Color(200,221,242));
-		labelsujet = new JLabel("Sélectionnez un sujet");
+		labelsujet = new JLabel("Selectionnez un sujet");
 		labelsujet.setFont(new Font("Arial", Font.PLAIN, 16));
 		sujet.add(labelsujet);
 		
@@ -204,14 +204,14 @@ public class AffichageSuj {
 		
 		ajout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Hashtable<String, String> données = new Hashtable<String, String>();
+				Hashtable<String, String> donnees = new Hashtable<String, String>();
 				
 				String[] attributs = Controleur.attributSujet();
 				for(int k=0;k<attributs.length;k++) {
-					données.put(attributs[k], "");
+					donnees.put(attributs[k], "");
 				}
 				
-				Enregistrement nouveauSujet = new Enregistrement(données, parent, "Nouveau sujet", "sujet");
+				Enregistrement nouveauSujet = new Enregistrement(donnees, parent, "Nouveau sujet", "sujet");
 			}
 		});
 		
@@ -219,7 +219,7 @@ public class AffichageSuj {
 			public void actionPerformed(ActionEvent arg0) {
                 if (selected != null){ //si un sujet est selectionner :
                 	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer le sujets  <FONT COLOR=\"red\">"
-                			+ selected.getDonnées().get("nom")
+                			+ selected.getDonnees().get("nom")
                 			+ "</FONT>.<br>Continuer ?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
                 		Controleur.supprimerSujet(selected);
                 		FenetrePrincipale.Maj();
@@ -233,7 +233,7 @@ public class AffichageSuj {
 		modifier.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg) {
                 if (selected != null){ //si un sujet est selectionner :
-                	Enregistrement modifInt = new Enregistrement(selected.getDonnées(), parent, "Modifier un sujet");
+                	Enregistrement modifInt = new Enregistrement(selected.getDonnees(), parent, "Modifier un sujet");
                 }else{ //sinon, message d'erreur
                 	JOptionPane.showMessageDialog(null, "Veuillez selestionner un sujet svp");	
                 }  
@@ -260,18 +260,18 @@ public class AffichageSuj {
 		return conteneur;
 	}
 	/**
-	 * Permet de restreindre les donnés selectionnés en fonction du sujet selectioné.
-	 * @param sujet Le sujet selectionné.
+	 * Permet de restreindre les donnes selectionnes en fonction du sujet selectione.
+	 * @param sujet Le sujet selectionne.
 	 */
 	public static void select_sujet(Sujets sujet) {
-		labelsujet.setText("#" + sujet.getDonnées().get("id") + " " + sujet.getDonnées().get("nom"));
-		titreSujet.setText(sujet.getDonnées().get("titre"));
+		labelsujet.setText("#" + sujet.getDonnees().get("id") + " " + sujet.getDonnees().get("nom"));
+		titreSujet.setText(sujet.getDonnees().get("titre"));
 		
 		selected = sujet;
 		
 		/* VOEUX */
 		
-		String[][] nb_voeux = Controleur.compterVoeuxParPosition(sujet.getDonnées().get("id"));
+		String[][] nb_voeux = Controleur.compterVoeuxParPosition(sujet.getDonnees().get("id"));
 		
 		String[] entetes = {"position", "nombre de voeux voeux"};
 		Object[][] sujData = new Object[nb_voeux.length][entetes.length+1];

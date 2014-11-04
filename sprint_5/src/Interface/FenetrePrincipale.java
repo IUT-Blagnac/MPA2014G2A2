@@ -23,7 +23,7 @@ import Modele.Intervenants;
 import Modele.Projets;
 import Modele.Sujets;
 /**
- * Permet à l'utilisateur d'utiliser pleinement l'application en lui donnant accès à toutes les fonctionnalités et donnés.
+ * Permet à l'utilisateur d'utiliser pleinement l'application en lui donnant accès à toutes les fonctionnalites et donnes.
  * @author groupe2A2
  *
  */
@@ -45,7 +45,7 @@ public class FenetrePrincipale extends JFrame {
 	private static int onglet_index = -1;
 	
 	/**
-	 * Crée et affiche l'interface principale de l'application
+	 * Cree et affiche l'interface principale de l'application
 	 */
 	public FenetrePrincipale (){
 		super("Opti");
@@ -75,7 +75,7 @@ public class FenetrePrincipale extends JFrame {
 		Enregistrer.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,InputEvent.CTRL_MASK));
 		quitter1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q,InputEvent.CTRL_MASK));
 		
-		// Import des données
+		// Import des donnees
 		Controleur.initCsv();
 		Controleur.importer();
 		
@@ -141,7 +141,7 @@ public class FenetrePrincipale extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				try {
-					OuvrirEnregistrer sauvegarder=new OuvrirEnregistrer(Controleur.entrés,"Ouvrir");
+					OuvrirEnregistrer sauvegarder=new OuvrirEnregistrer(Controleur.entres,"Ouvrir");
 					
 				} catch (IOException e1) {
 					
@@ -158,7 +158,7 @@ public class FenetrePrincipale extends JFrame {
 		this.revalidate();
 	}
 	/**
-	 * Vérifie l'utilisation de enregistrer sous et met à jour pouvoirEnregistrer. Ainsi l'utilisateur ne pourra pas enregistrer avant d'avoir enregistrer_sous.
+	 * Verifie l'utilisation de enregistrer sous et met à jour pouvoirEnregistrer. Ainsi l'utilisateur ne pourra pas enregistrer avant d'avoir enregistrer_sous.
 	 */
 	public void majPouvoirEnregistrer(){
 		if(Controleur.sorties.get("Etudiants").equals("")){

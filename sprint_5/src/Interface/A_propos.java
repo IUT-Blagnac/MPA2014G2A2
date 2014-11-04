@@ -22,7 +22,7 @@ import javax.swing.border.TitledBorder;
 public class A_propos extends JDialog {
 
 /**
- * Crée et affiche la fenetre A Propos
+ * Cree et affiche la fenetre A Propos
  * @param parent est la fenetre mère de la fenetre A Propos
  * @param titre est le titre de la fenetre A Propos
  */
@@ -37,7 +37,7 @@ public class A_propos extends JDialog {
 	}
 	
 	/**
-	 * crée le panneau principal de la fenetre A Propos
+	 * cree le panneau principal de la fenetre A Propos
 	 * @return retourne le panneau principale de la fenetre A propos
 	 */
 	public JPanel panneau(){
@@ -72,7 +72,7 @@ public class A_propos extends JDialog {
 		
 		// On ajoute pan2 pan3  dans GrandCentre
 		
-		JPanel pan2 = new JPanel() ; // panneau correspondant à Université Toulouse 2
+		JPanel pan2 = new JPanel() ; // panneau correspondant à Universite Toulouse 2
 		
 		JPanel pan3 = new JPanel() ; // panneau correspondant à IUT de Blagnac
 		
@@ -94,7 +94,7 @@ public class A_propos extends JDialog {
 		
 		
 		JPanel pan4 = new JPanel() ; // panneau correspondant à DUT INFO S3/Module MPA
-		JPanel pan5 = new JPanel() ; // panneau correspondant à la liste des membres de l'équipe et numéro de groupe
+		JPanel pan5 = new JPanel() ; // panneau correspondant à la liste des membres de l'equipe et numero de groupe
 	
 		GrandSud.setLayout(new BorderLayout());
 		

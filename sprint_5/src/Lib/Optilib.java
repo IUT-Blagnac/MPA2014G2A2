@@ -18,7 +18,7 @@ public class Optilib {
 	
 	public static Hashtable<String, String>[] reader(String adresse_csv) {
 		
-		// Création du tableau
+		// Creation du tableau
 		Hashtable<String, String>[] tableau;
 		String fichier = "";
 		
@@ -35,7 +35,7 @@ public class Optilib {
 			}
 		}
 
-		// Découpe du fichier en lignes
+		// Decoupe du fichier en lignes
 		String retour = "\n";
 		if(fichier.contains("\r\n")) {
 			retour = "\r\n";
@@ -43,7 +43,7 @@ public class Optilib {
 		String[] lignes = fichier.split(retour);
 		tableau = new Hashtable[lignes.length-1];
 
-		// Récupération des attributs (première ligne du tableau)
+		// Recuperation des attributs (première ligne du tableau)
 		String separation = ",";
 		if(fichier.contains(";")) {
 			separation = ";";
@@ -53,7 +53,7 @@ public class Optilib {
 		for(int i=1;i<lignes.length;i++) {
 			String[] colonnes = lignes[i].split(separation);
 			
-			// Création de la ligne
+			// Creation de la ligne
 			Hashtable<String, String> ligne = new Hashtable();
 			for(int j=0;j<colonnes.length;j++) {
 				ligne.put(attributs[j], colonnes[j]);

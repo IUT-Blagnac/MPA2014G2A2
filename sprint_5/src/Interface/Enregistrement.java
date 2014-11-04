@@ -69,10 +69,10 @@ public class Enregistrement extends JDialog {
 				listeDeroulante.setPreferredSize(new Dimension(200,30));
 				ArrayList<Sujets> listeSujets = Controleur.getSujets();
 				for(int j=0;j<listeSujets.size();j++) {
-					listeDeroulante.addItem(listeSujets.get(j).getDonnées().get("nom"));
+					listeDeroulante.addItem(listeSujets.get(j).getDonnees().get("nom"));
 					
-					if(listeSujets.get(j).getDonnées().get("id").equals(sortie.get(attribut))) {
-						listeDeroulante.setSelectedItem(listeSujets.get(j).getDonnées().get("nom"));
+					if(listeSujets.get(j).getDonnees().get("id").equals(sortie.get(attribut))) {
+						listeDeroulante.setSelectedItem(listeSujets.get(j).getDonnees().get("nom"));
 					}
 				}
 				panel_champs.add(listeDeroulante);
@@ -85,10 +85,10 @@ public class Enregistrement extends JDialog {
 				listeDeroulante.setPreferredSize(new Dimension(200,30));
 				ArrayList<Projets> listeProjets = Controleur.getProjets();
 				for(int j=0;j<listeProjets.size();j++) {
-					listeDeroulante.addItem(listeProjets.get(j).getDonnées().get("id"));
+					listeDeroulante.addItem(listeProjets.get(j).getDonnees().get("id"));
 					
-					if(listeProjets.get(j).getDonnées().get("id").equals(sortie.get(attribut))) {
-						listeDeroulante.setSelectedItem(listeProjets.get(j).getDonnées().get("nom"));
+					if(listeProjets.get(j).getDonnees().get("id").equals(sortie.get(attribut))) {
+						listeDeroulante.setSelectedItem(listeProjets.get(j).getDonnees().get("nom"));
 					}
 				}
 				panel_champs.add(listeDeroulante);
@@ -103,10 +103,10 @@ public class Enregistrement extends JDialog {
 				
 				listeDeroulante.addItem("");
 				for(int j=0;j<listeProjets.size();j++) {
-					listeDeroulante.addItem(listeProjets.get(j).getDonnées().get("nom") + " " + listeProjets.get(j).getDonnées().get("prenom"));
+					listeDeroulante.addItem(listeProjets.get(j).getDonnees().get("nom") + " " + listeProjets.get(j).getDonnees().get("prenom"));
 					
-					if(listeProjets.get(j).getDonnées().get("id").equals(sortie.get(attribut))) {
-						listeDeroulante.setSelectedItem(listeProjets.get(j).getDonnées().get("nom") + " " + listeProjets.get(j).getDonnées().get("prenom"));
+					if(listeProjets.get(j).getDonnees().get("id").equals(sortie.get(attribut))) {
+						listeDeroulante.setSelectedItem(listeProjets.get(j).getDonnees().get("nom") + " " + listeProjets.get(j).getDonnees().get("prenom"));
 					}
 				}
 				
@@ -180,12 +180,12 @@ public class Enregistrement extends JDialog {
 						String nomInter = ((JComboBox<String>)champs[i]).getItemAt(((JComboBox<String>)champs[i]).getSelectedIndex());
 						
 						if(!nomInter.equals("")) {
-							String idInter = Controleur.searchIntervenant("nom", nomInter.split(" ")[0]).get(0).getDonnées().get("id");
+							String idInter = Controleur.searchIntervenant("nom", nomInter.split(" ")[0]).get(0).getDonnees().get("id");
 							table.put(attributs.get(i), idInter);
 						}
 					} else if(attribut.equals("sujet")) {
 						String nomSujet = ((JComboBox<String>)champs[i]).getItemAt(((JComboBox<String>)champs[i]).getSelectedIndex());
-						String idSujet = Controleur.searchSujet("nom", nomSujet).get(0).getDonnées().get("id");
+						String idSujet = Controleur.searchSujet("nom", nomSujet).get(0).getDonnees().get("id");
 						table.put(attributs.get(i), idSujet);
 					} else if(attribut.equals("groupe")) {
 						String groupe = ((JComboBox<String>)champs[i]).getItemAt(((JComboBox<String>)champs[i]).getSelectedIndex());
