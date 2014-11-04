@@ -23,7 +23,7 @@ import Modele.Intervenants;
 import Modele.Projets;
 import Modele.Sujets;
 /**
- * Permet à l'utilisateur d'utiliser pleinement l'application en lui donnant acces à toutes les fonctionnalites et donnes.
+ * Permet a l'utilisateur d'utiliser pleinement l'application en lui donnant acces a toutes les fonctionnalites et donnes.
  * @author groupe2A2
  *
  */
@@ -158,7 +158,7 @@ public class FenetrePrincipale extends JFrame {
 		this.revalidate();
 	}
 	/**
-	 * Verifie l'utilisation de enregistrer sous et met à jour pouvoirEnregistrer. Ainsi l'utilisateur ne pourra pas enregistrer avant d'avoir enregistrer_sous.
+	 * Verifie l'utilisation de enregistrer sous et met a jour pouvoirEnregistrer. Ainsi l'utilisateur ne pourra pas enregistrer avant d'avoir enregistrer_sous.
 	 */
 	public void majPouvoirEnregistrer(){
 		if(Controleur.sorties.get("Etudiants").equals("")){
@@ -174,7 +174,7 @@ public class FenetrePrincipale extends JFrame {
 		}
 	}
 	/**
-	 * Met à jour les differants onglets contenu dans FenetrePrincipale.
+	 * Met a jour les differants onglets contenu dans FenetrePrincipale.
 	 */
 	public static void Maj() {
 		onglet_index = onglets.getSelectedIndex();
