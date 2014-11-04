@@ -12,7 +12,7 @@ script:
   - SRCDIR=./src/
   - BINDIR=./bin/
 
-  - find $SRCDIR/* -type f -name *.java | xargs sed -i "s/Ã©/e/g"
+  - find $SRCDIR/* -type f -name *.java | xargs sed -i "s/é/e/g"
   - ls $SRCDIR/* -alF
   - cat $SRCDIR/Modele/Etudiants.java
   
