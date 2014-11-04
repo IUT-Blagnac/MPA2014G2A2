@@ -28,8 +28,8 @@ public class AffichageProj {
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
 	 * Permet de creer un JPanel comportant des infos sur les projets et l'acces aux differentes fonctionalites sur les projets.
-	 * @param pliste La liste comportant les projets à afficher.
-	 * @param entetes La liste comportant les entetes à afficher.
+	 * @param pliste La liste comportant les projets a afficher.
+	 * @param entetes La liste comportant les entetes a afficher.
 	 * @param pparent La fenetre mere du JPannel qui sera retourne.
 	 * @return Un JPanel comportant des infos sur les projets et l'acces aux differentes fonctionalites sur les projets.
 	 */

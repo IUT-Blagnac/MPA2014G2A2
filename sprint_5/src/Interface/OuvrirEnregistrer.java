@@ -22,7 +22,7 @@ import Controleur.Controleur;
 
 
 /**
- * Permet à l'utilisateur de l'application de sauvegarder ou enregistrer ses fichiers.
+ * Permet a l'utilisateur de l'application de sauvegarder ou enregistrer ses fichiers.
  * @author groupe2A2
  * 
  *
@@ -42,7 +42,7 @@ public class OuvrirEnregistrer extends JDialog{
 	/**
 	 * Cree une fenetre permettant de Sauvegarder ou Ouvrir les differents elements
 	 * @param sortie Donner une hashtable comportant [nomAttributs] vers [chemin actuel d'ouverture/enregistrement]
-	 * @param nomFon le traitement à effectuer "Ouvrir" pour ouvrir ou "Enregistrer" pour Enregistrer
+	 * @param nomFon le traitement a effectuer "Ouvrir" pour ouvrir ou "Enregistrer" pour Enregistrer
 	 * @throws IOException exception maggle
 	 */
 	public OuvrirEnregistrer(Hashtable<String, String> sortie, String nomFon) throws IOException{
@@ -200,7 +200,7 @@ public class OuvrirEnregistrer extends JDialog{
 	    this.pack();
 	}
 	/**
-	 * Ouvre un explorer permettant à l'utilisateur de choisir son emplacement/fichier d'enregistrement/ouverture
+	 * Ouvre un explorer permettant a l'utilisateur de choisir son emplacement/fichier d'enregistrement/ouverture
 	 * @return retourne le chemin choisi par l'utilisateur.
 	 * @throws IOException
 	 */

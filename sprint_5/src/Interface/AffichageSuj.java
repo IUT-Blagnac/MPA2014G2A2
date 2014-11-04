@@ -41,8 +41,8 @@ public class AffichageSuj {
 	
 	/**
 	 * Permet de creer un JPanel comportant des infos sur les sujets et l'acces aux differentes fonctionalites sur les sujets.
-	 * @param pliste La liste comportant les sujets à afficher.
-	 * @param entetes La liste comportant les entetes à afficher.
+	 * @param pliste La liste comportant les sujets a afficher.
+	 * @param entetes La liste comportant les entetes a afficher.
 	 * @param pparent La fenetre mere du JPannel qui sera retourne.
 	 * @return Un JPanel comportant des infos sur les sujets et l'acces aux differentes fonctionalites sur les sujets.
 	 */

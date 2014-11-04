@@ -33,7 +33,7 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
 	 * Permet de creer un JPanel comportant des infos sur les voeux et l'acces aux differentes fonctionalites sur les voeux.
-	 * @param pliste La liste comportant les voeux à afficher.
+	 * @param pliste La liste comportant les voeux a afficher.
 	 * @param p_parent La fenetre mere du JPannel qui sera retourne.
 	 * @return Un JPanel comportant des infos sur les voeux et l'acces aux differentes fonctionalites sur les voeux.
 	 */

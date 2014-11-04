@@ -68,7 +68,7 @@ public class Recherche extends JDialog {
 		champs.add(attribut);
 	
 		/* Valeur */
-		JLabel text_valeur = new JLabel("Mot clef à rechercher :");
+		JLabel text_valeur = new JLabel("Mot clef a rechercher :");
 		text_valeur.setFont(police);
 		text_valeur.setPreferredSize(new Dimension(300, 50));
 		champs.add(text_valeur);
