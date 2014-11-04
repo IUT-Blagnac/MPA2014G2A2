@@ -120,7 +120,7 @@ public class AffichageProj {
 			public void actionPerformed(ActionEvent arg0) {
 	                int index= table.getSelectedRow();
 	                if ( index != -1 ){ //si un ligne est selectionner :
-	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de dupliquer le projets <FONT COLOR=\"red\">"+
+	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous etes sur le point de dupliquer le projets <FONT COLOR=\"red\">"+
 	                			liste.get(index).getDonnees().get("groupe")+" "+
 	                			liste.get(index).getDonnees().get("sujet")+
 	                															"</font> de la liste.<br>Continuer ?</html>","Dupplication",JOptionPane.YES_NO_OPTION)){
@@ -158,7 +158,7 @@ public class AffichageProj {
 			public void actionPerformed(ActionEvent arg0) {
                 int index= table.getSelectedRow();
                 if ( index != -1 ){ //si un ligne est selectionner :
-                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer le projets <FONT COLOR=\"red\">"+
+                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous etes sur le point de supprimer le projets <FONT COLOR=\"red\">"+
                 			liste.get(index).getDonnees().get("groupe")+" "+
                 			liste.get(index).getDonnees().get("sujet")+
                 															"</FONT> de la liste.<br>Continuer?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
@@ -187,7 +187,7 @@ public class AffichageProj {
 		
 		rechercher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Recherche fenêtre = new Recherche(recherche, entetes, parent);
+				Recherche fenetre = new Recherche(recherche, entetes, parent);
 			}
 		});
 		

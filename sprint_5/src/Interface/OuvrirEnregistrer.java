@@ -40,7 +40,7 @@ public class OuvrirEnregistrer extends JDialog{
 	private OuvrirEnregistrer cetteFen;
 	
 	/**
-	 * Cree une fenêtre permettant de Sauvegarder ou Ouvrir les differents elements
+	 * Cree une fenetre permettant de Sauvegarder ou Ouvrir les differents elements
 	 * @param sortie Donner une hashtable comportant [nomAttributs] vers [chemin actuel d'ouverture/enregistrement]
 	 * @param nomFon le traitement à effectuer "Ouvrir" pour ouvrir ou "Enregistrer" pour Enregistrer
 	 * @throws IOException exception maggle

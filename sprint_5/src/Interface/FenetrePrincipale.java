@@ -40,7 +40,7 @@ public class FenetrePrincipale extends JFrame {
 	private JPanel panfenetre= new JPanel();
 	private boolean pouvoirEnregistrer=false;
 	
-	private static JFrame fenêtre;
+	private static JFrame fenetre;
 	private static JTabbedPane onglets;
 	private static int onglet_index = -1;
 	
@@ -54,7 +54,7 @@ public class FenetrePrincipale extends JFrame {
 		this.setMinimumSize(new Dimension(1280, 720));
 		this.setLocationRelativeTo(null);
 
-		fenêtre = this;
+		fenetre = this;
 
 		// Positionnement
 		this.setLayout(new BorderLayout());
@@ -93,7 +93,7 @@ public class FenetrePrincipale extends JFrame {
 
 		aPropos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				A_propos fenAP=new A_propos(fenêtre,"A Propos");
+				A_propos fenAP=new A_propos(fenetre,"A Propos");
 			}
 		});
 		
@@ -181,18 +181,18 @@ public class FenetrePrincipale extends JFrame {
 		
 		onglets.removeAll();
 		
-		onglets.add(AffichageSuj.affiJPanel(Controleur.getSujets(),Sujets.getAttributs(), fenêtre),"Sujets");
-		onglets.add(AffichageProj.affiJPanel(Controleur.getProjets(), Projets.getAttributs(), fenêtre),"Projets");
-		onglets.add(AffichageEtu.affiJPanel(Controleur.getEtudiants(),Etudiants.getAttributs(), fenêtre),"Etudiants");
-		onglets.add(AffichageInt.affiJPanel(Controleur.getIntervenants(), Intervenants.getAttributs(), fenêtre),"Intervenants");
-		onglets.add(AffichageGroupe.affiJPanel(fenêtre, Controleur.getGroupes()),"Groupes");
-		onglets.add(AffichageVoeux.affiJPanel(Controleur.getVoeux(), fenêtre), "Voeux");
+		onglets.add(AffichageSuj.affiJPanel(Controleur.getSujets(),Sujets.getAttributs(), fenetre),"Sujets");
+		onglets.add(AffichageProj.affiJPanel(Controleur.getProjets(), Projets.getAttributs(), fenetre),"Projets");
+		onglets.add(AffichageEtu.affiJPanel(Controleur.getEtudiants(),Etudiants.getAttributs(), fenetre),"Etudiants");
+		onglets.add(AffichageInt.affiJPanel(Controleur.getIntervenants(), Intervenants.getAttributs(), fenetre),"Intervenants");
+		onglets.add(AffichageGroupe.affiJPanel(fenetre, Controleur.getGroupes()),"Groupes");
+		onglets.add(AffichageVoeux.affiJPanel(Controleur.getVoeux(), fenetre), "Voeux");
 		
 		if(onglet_index != -1) {
 			onglets.setSelectedIndex(onglet_index);
 		}
 		
-		fenêtre.revalidate();
+		fenetre.revalidate();
 	}
 	
 	public static JTabbedPane getOnglet(){
@@ -200,7 +200,7 @@ public class FenetrePrincipale extends JFrame {
 	}
 	
 	public static JFrame getFenetre(){
-		return fenêtre;
+		return fenetre;
 	}
 	
 

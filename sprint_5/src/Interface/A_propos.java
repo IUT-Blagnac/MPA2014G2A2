@@ -72,9 +72,9 @@ public class A_propos extends JDialog {
 		
 		// On ajoute pan2 pan3  dans GrandCentre
 		
-		JPanel pan2 = new JPanel() ; // panneau correspondant à Universite Toulouse 2
+		JPanel pan2 = new JPanel() ; // panneau correspondant a Universite Toulouse 2
 		
-		JPanel pan3 = new JPanel() ; // panneau correspondant à IUT de Blagnac
+		JPanel pan3 = new JPanel() ; // panneau correspondant a IUT de Blagnac
 		
 		
 		GridLayout grid = new GridLayout(1,2);
@@ -93,8 +93,8 @@ public class A_propos extends JDialog {
 		// On ajoute pan4 et pan5  dans GrandSud
 		
 		
-		JPanel pan4 = new JPanel() ; // panneau correspondant à DUT INFO S3/Module MPA
-		JPanel pan5 = new JPanel() ; // panneau correspondant à la liste des membres de l'equipe et numero de groupe
+		JPanel pan4 = new JPanel() ; // panneau correspondant a DUT INFO S3/Module MPA
+		JPanel pan5 = new JPanel() ; // panneau correspondant a la liste des membres de l'equipe et numero de groupe
 	
 		GrandSud.setLayout(new BorderLayout());
 		

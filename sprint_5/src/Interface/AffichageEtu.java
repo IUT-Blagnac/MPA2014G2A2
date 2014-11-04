@@ -109,7 +109,7 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 	            public void actionPerformed(final ActionEvent e) {
 	                int index= table.getSelectedRow();
 	                if ( index != -1 ){ //si une ligne est selectionner :
-	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer <FONT COLOR=\"red\">"+ 
+	                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous etes sur le point de supprimer <FONT COLOR=\"red\">"+ 
 	                																liste.get(index).getDonnees().get("nom")+" "+ 
 	                																liste.get(index).getDonnees().get("prenom")+
 	                																"</FONT> de la liste.<br>Continuer ?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
@@ -164,7 +164,7 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 		
 		rechercher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Recherche fenêtre = new Recherche(recherche, entetes, parent);
+				Recherche fenetre = new Recherche(recherche, entetes, parent);
 			}
 		});
 		

@@ -218,7 +218,7 @@ public class AffichageSuj {
 		suprimer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
                 if (selected != null){ //si un sujet est selectionner :
-                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous êtes sur le point de supprimer le sujets  <FONT COLOR=\"red\">"
+                	if(JOptionPane.YES_OPTION==JOptionPane.showConfirmDialog(null,"<html>Vous etes sur le point de supprimer le sujets  <FONT COLOR=\"red\">"
                 			+ selected.getDonnees().get("nom")
                 			+ "</FONT>.<br>Continuer ?</html>","Suppression",JOptionPane.YES_NO_OPTION)){
                 		Controleur.supprimerSujet(selected);
@@ -242,7 +242,7 @@ public class AffichageSuj {
 		
 		rechercher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Recherche fenêtre = new Recherche(recherche, entetes, parent);
+				Recherche fenetre = new Recherche(recherche, entetes, parent);
 			}
 		});
 		
