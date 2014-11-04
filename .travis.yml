@@ -44,7 +44,6 @@ script:
   - echo /***** Compilation du controleur *****/
   
   - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/Controleur.java
-  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
   - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/OptiMain.java
 
   - echo /***** Compilation des tests *****/
