@@ -145,7 +145,7 @@ public class TestDoc {
     
     
     public static void afficherDateRepertoire(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est a jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -175,7 +175,7 @@ public class TestDoc {
     }
     
     public static void afficherDateRepertoireDocTxt(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est a jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -205,7 +205,7 @@ public class TestDoc {
     }
     
     public static void afficherDateRepertoireDocHtml(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est a jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -236,7 +236,7 @@ public class TestDoc {
     
     
     public static void verifierDateRepertoire(File repertoire){ 
-    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est à jour ou non
+    	//Permet de verifier la date de chaque image d'un repertoire , et d'afficher un message si l'image est a jour ou non
     	//Penser plus tard a un moyen de mettre a jour une image sans quitter le .java
     	String [] listefichiers; 
     	
@@ -389,7 +389,7 @@ public class TestDoc {
 	
     boolean trouve = false;
     
-    System.out.println("Date de dernière mise a jour des docs  : " +"\n");
+    System.out.println("Date de derniere mise a jour des docs  : " +"\n");
     
     afficherDateRepertoireDocHtml(File4);
     
@@ -398,7 +398,7 @@ public class TestDoc {
     
     
     System.out.println("\n");
-	System.out.println("Liste des images et leur dernière modification contenus dans le dossier situe à : " +dossier +"\n");	
+	System.out.println("Liste des images et leur derniere modification contenus dans le dossier situe a : " +dossier +"\n");	
 	
 	
 	int i =0;
@@ -448,7 +448,7 @@ public class TestDoc {
 	}*/
 	
 	
-	String motif = "\\/([^.]+)\\.java";  // le . de chaine. signifie qu'on veut chaine suivie d'un caractère 
+	String motif = "\\/([^.]+)\\.java";  // le . de chaine. signifie qu'on veut chaine suivie d'un caractere 
   	
     int nbreDeFois = 0;
     
@@ -523,7 +523,7 @@ public class TestDoc {
     
     
     /* Marche pas 
-    String motifJpg = ".JPG";  // le . de chaine. signifie qu'on veut chaine suivie d'un caractère (dans notre cas chaine1 2 ou 3)
+    String motifJpg = ".JPG";  // le . de chaine. signifie qu'on veut chaine suivie d'un caractere (dans notre cas chaine1 2 ou 3)
   	
     nbreDeFois = 0;
     

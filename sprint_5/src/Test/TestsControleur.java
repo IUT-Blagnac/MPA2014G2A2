@@ -50,7 +50,7 @@ public class TestsControleur extends TestCase {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne recupère pas tous les enregistrements");
+					.println("Erreur : Importer ne recupere pas tous les enregistrements");
 		}
 
 		if (Controleur.getEtudiants().get(0).getDonnees().get("nom")
@@ -58,7 +58,7 @@ public class TestsControleur extends TestCase {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne recupère pas les bonnes valeurs");
+					.println("Erreur : Importer ne recupere pas les bonnes valeurs");
 		}
 
 		Controleur.entres.put("Etudiants", "test_data/test2.csv");
@@ -68,7 +68,7 @@ public class TestsControleur extends TestCase {
 			nbTestsOk++;
 		} else {
 			System.err
-					.println("Erreur : Importer ne recupère pas tous les enregistrements");
+					.println("Erreur : Importer ne recupere pas tous les enregistrements");
 		}
 
 	}
