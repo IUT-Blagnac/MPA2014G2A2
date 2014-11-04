@@ -43,7 +43,7 @@ public class Optilib {
 		String[] lignes = fichier.split(retour);
 		tableau = new Hashtable[lignes.length-1];
 
-		// Recuperation des attributs (première ligne du tableau)
+		// Recuperation des attributs (premiere ligne du tableau)
 		String separation = ",";
 		if(fichier.contains(";")) {
 			separation = ";";

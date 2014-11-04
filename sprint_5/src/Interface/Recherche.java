@@ -32,7 +32,7 @@ public class Recherche extends JDialog {
 	 * Cree et affiche une fenetre de recherche restreinte par attributs selectionne attributs .
 	 * @param sortie Le tableau de sorties.
 	 * @param entete Un tableau d'entetes.
-	 * @param parent La fenetre mère.
+	 * @param parent La fenetre mere.
 	 */
 	Recherche(final Hashtable<String, String> sortie, String[] entete, JFrame parent) {
 		super(parent, "Recherche", true);

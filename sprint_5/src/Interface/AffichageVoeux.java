@@ -32,10 +32,10 @@ public class AffichageVoeux extends DefaultTableCellRenderer{
 	private static ArrayList<Voeux> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de creer un JPanel comportant des infos sur les voeux et l'accès aux differentes fonctionalites sur les voeux.
+	 * Permet de creer un JPanel comportant des infos sur les voeux et l'acces aux differentes fonctionalites sur les voeux.
 	 * @param pliste La liste comportant les voeux à afficher.
-	 * @param p_parent La fenetre mère du JPannel qui sera retourne.
-	 * @return Un JPanel comportant des infos sur les voeux et l'accès aux differentes fonctionalites sur les voeux.
+	 * @param p_parent La fenetre mere du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les voeux et l'acces aux differentes fonctionalites sur les voeux.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Voeux> pliste, JFrame p_parent){
 		parent = p_parent;

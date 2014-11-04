@@ -31,11 +31,11 @@ public class AffichageEtu extends DefaultTableCellRenderer{
 	private static ArrayList<Etudiants> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de creer un JPanel comportant des infos sur les etudiants et l'accès aux differentes fonctionalites sur les etudiants.
+	 * Permet de creer un JPanel comportant des infos sur les etudiants et l'acces aux differentes fonctionalites sur les etudiants.
 	 * @param pliste La liste comportant les Etudiants à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPanel qui sera retourne.
-	 * @return Le JPanel comportant les infos sur les etudiants et l'accès aux differentes fonctionalites.
+	 * @param pparent La fenetre mere du JPanel qui sera retourne.
+	 * @return Le JPanel comportant les infos sur les etudiants et l'acces aux differentes fonctionalites.
 	 */
 	public static JPanel affiJPanel(ArrayList<Etudiants> pliste, final String[] entetes, JFrame pparent){
 		parent = pparent;

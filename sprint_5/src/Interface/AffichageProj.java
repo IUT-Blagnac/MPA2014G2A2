@@ -27,11 +27,11 @@ public class AffichageProj {
 	private static ArrayList<Projets> liste;
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	/**
-	 * Permet de creer un JPanel comportant des infos sur les projets et l'accès aux differentes fonctionalites sur les projets.
+	 * Permet de creer un JPanel comportant des infos sur les projets et l'acces aux differentes fonctionalites sur les projets.
 	 * @param pliste La liste comportant les projets à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPannel qui sera retourne.
-	 * @return Un JPanel comportant des infos sur les projets et l'accès aux differentes fonctionalites sur les projets.
+	 * @param pparent La fenetre mere du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les projets et l'acces aux differentes fonctionalites sur les projets.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Projets> pliste,final String[]entetes, JFrame pparent){
 		parent = pparent;

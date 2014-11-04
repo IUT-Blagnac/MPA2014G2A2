@@ -33,10 +33,10 @@ public class AffichageGroupe {
 	private static JPanel EtuTable;
 	
 	/**
-	 * Permet de creer un JPanel comportant des infos sur les groupes et l'accès aux differentes fonctionalites sur les groupes.
-	 * @param fenêtre La fenetre mère du JPannel qui sera retourne.
+	 * Permet de creer un JPanel comportant des infos sur les groupes et l'acces aux differentes fonctionalites sur les groupes.
+	 * @param fenêtre La fenetre mere du JPannel qui sera retourne.
 	 * @param listeGroupe Le tableau de String comportant les infos sur les groupes.
-	 * @return Le JPanel comportant des infos sur les groupes et l'accès aux differentes fonctionalites sur les groupes.
+	 * @return Le JPanel comportant des infos sur les groupes et l'acces aux differentes fonctionalites sur les groupes.
 	 */
 	public static JPanel affiJPanel(JFrame fenêtre, final String[][] listeGroupe) {
 

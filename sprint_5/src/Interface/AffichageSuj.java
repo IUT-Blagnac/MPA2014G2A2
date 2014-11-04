@@ -40,11 +40,11 @@ public class AffichageSuj {
 	private static Hashtable<String, String> recherche = new Hashtable<>();
 	
 	/**
-	 * Permet de creer un JPanel comportant des infos sur les sujets et l'accès aux differentes fonctionalites sur les sujets.
+	 * Permet de creer un JPanel comportant des infos sur les sujets et l'acces aux differentes fonctionalites sur les sujets.
 	 * @param pliste La liste comportant les sujets à afficher.
 	 * @param entetes La liste comportant les entetes à afficher.
-	 * @param pparent La fenetre mère du JPannel qui sera retourne.
-	 * @return Un JPanel comportant des infos sur les sujets et l'accès aux differentes fonctionalites sur les sujets.
+	 * @param pparent La fenetre mere du JPannel qui sera retourne.
+	 * @return Un JPanel comportant des infos sur les sujets et l'acces aux differentes fonctionalites sur les sujets.
 	 */
 	public static JPanel affiJPanel(final ArrayList<Sujets> pliste,final String[]entetes, JFrame pparent) {
 		parent = pparent;

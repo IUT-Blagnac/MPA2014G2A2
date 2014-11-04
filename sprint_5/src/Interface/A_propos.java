@@ -23,7 +23,7 @@ public class A_propos extends JDialog {
 
 /**
  * Cree et affiche la fenetre A Propos
- * @param parent est la fenetre mère de la fenetre A Propos
+ * @param parent est la fenetre mere de la fenetre A Propos
  * @param titre est le titre de la fenetre A Propos
  */
 	public A_propos(JFrame parent,String titre){

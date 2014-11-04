@@ -23,7 +23,7 @@ import Modele.Intervenants;
 import Modele.Projets;
 import Modele.Sujets;
 /**
- * Permet à l'utilisateur d'utiliser pleinement l'application en lui donnant accès à toutes les fonctionnalites et donnes.
+ * Permet à l'utilisateur d'utiliser pleinement l'application en lui donnant acces à toutes les fonctionnalites et donnes.
  * @author groupe2A2
  *
  */
