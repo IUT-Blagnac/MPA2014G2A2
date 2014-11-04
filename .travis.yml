@@ -13,6 +13,8 @@ script:
   - BINDIR=./bin/
 
   - find $SRCDIR/* -type f -name *.java | xargs sed -i "s/é/e/g"
+  - ls $SRCDIR/* -alF
+  - cat $SRCDIR/Modele/Etudiants.java
   
   - echo /***** Compilation du modele *****/
   
