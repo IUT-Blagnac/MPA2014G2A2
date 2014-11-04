@@ -7,10 +7,11 @@ before_install:
 script:
   - cd sprint_5
   
-  - set SRCDIR=./src/
-  - set BINDIR=./bin/
+  - SRCDIR=./src/
+  - echo $SRCDIR
+  - BINDIR=./bin/
 
-  - echo /***** Compilation du modèle *****/
+  - echo /***** Compilation du modele *****/
   
   - javac -d %BINDIR% %SRCDIR%/Modele/Sujets.java
   - javac -d %BINDIR% %SRCDIR%/Modele/Etudiants.java
