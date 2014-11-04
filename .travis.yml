@@ -16,15 +16,15 @@ script:
   
   - echo /***** Compilation du modele *****/
   
-  - javac -d $BINDIR $SRCDIR/Modele/Sujets.java
-  - javac -d $BINDIR $SRCDIR/Modele/Etudiants.java
-  - javac -d $BINDIR $SRCDIR/Modele/Projets.java
-  - javac -d $BINDIR $SRCDIR/Modele/Intervenants.java
-  - javac -d $BINDIR $SRCDIR/Modele/Voeux.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Modele/Sujets.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Modele/Etudiants.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Modele/Projets.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Modele/Intervenants.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Modele/Voeux.java
  
   - echo /***** Compilation doptilib *****/
  
-  - javac -d $BINDIR $SRCDIR/Lib/Optilib.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Lib/Optilib.java
  
   - echo /***** Compilation de linterface *****/
  
@@ -43,9 +43,9 @@ script:
   
   - echo /***** Compilation du controleur *****/
   
-  - javac -d $BINDIR $SRCDIR/Controleur/Controleur.java
-  - javac -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
-  - javac -d $BINDIR $SRCDIR/Controleur/OptiMain.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/Controleur.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/OptiMain.java
 
   - echo /***** Compilation des tests *****/
  
