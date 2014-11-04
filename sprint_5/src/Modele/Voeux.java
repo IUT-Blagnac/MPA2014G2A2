@@ -3,7 +3,7 @@ package Modele;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class Voeux {
+public class Voeux implements Comparable<Voeux> {
 	private static String[] attributs = {"groupe", "sujet", "position"};
 	private Hashtable<String, String> donnees = new Hashtable();
 	
@@ -27,5 +27,13 @@ public class Voeux {
 
 	public void setDonnees(Hashtable<String, String> donnees2) {
 		this.donnees = donnees2;
+	}
+	
+	public int compareTo(Voeux v2) {
+		if(Integer.parseInt(this.getDonnees().get("position")) < Integer.parseInt(v2.getDonnees().get("position"))) {
+			return -1;
+		} else {
+			return 1;
+		}
 	}
 }

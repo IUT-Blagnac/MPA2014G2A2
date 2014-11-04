@@ -1,6 +1,7 @@
 package Controleur;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
@@ -632,7 +633,7 @@ public class Controleur {
 			}
 		}
 		
-		resultat.sort(new ComparateurDeVoeux());
+		Collections.sort(resultat);
 		
 		return resultat;
 	}
