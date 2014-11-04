@@ -8,48 +8,47 @@ script:
   - cd sprint_5
   
   - SRCDIR=./src/
-  - echo $SRCDIR
   - BINDIR=./bin/
 
   - echo /***** Compilation du modele *****/
   
-  - javac -d %BINDIR% %SRCDIR%/Modele/Sujets.java
-  - javac -d %BINDIR% %SRCDIR%/Modele/Etudiants.java
-  - javac -d %BINDIR% %SRCDIR%/Modele/Projets.java
-  - javac -d %BINDIR% %SRCDIR%/Modele/Intervenants.java
-  - javac -d %BINDIR% %SRCDIR%/Modele/Voeux.java
+  - javac -d $BINDIR $SRCDIR/Modele/Sujets.java
+  - javac -d $BINDIR $SRCDIR/Modele/Etudiants.java
+  - javac -d $BINDIR $SRCDIR/Modele/Projets.java
+  - javac -d $BINDIR $SRCDIR/Modele/Intervenants.java
+  - javac -d $BINDIR $SRCDIR/Modele/Voeux.java
  
   - echo /***** Compilation d'optilib *****/
  
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Lib/Optilib.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Lib/Optilib.java
  
   - echo /***** Compilation de l'interface *****/
  
-  - javac -d %BINDIR% %SRCDIR%/Interface/A_propos.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageEtu.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageInt.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageProj.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageSuj.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageGroupe.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageVoeux.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/Enregistrement.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/OuvrirEnregistrer.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/Recherche.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageVoeux.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/FenetrePrincipale.java
+  - javac -d $BINDIR $SRCDIR/Interface/A_propos.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageEtu.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageInt.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageProj.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageSuj.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageGroupe.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/Enregistrement.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/OuvrirEnregistrer.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/Recherche.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/AffichageVoeux.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Interface/FenetrePrincipale.java
   
   - echo /***** Compilation du controleur *****/
   
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/Controleur.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/ComparateurDeVoeux.java
-  - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/OptiMain.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/Controleur.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/ComparateurDeVoeux.java
+  - javac -cp .;$SRCDIR -d $BINDIR $SRCDIR/Controleur/OptiMain.java
 
   - echo /***** Compilation des tests *****/
  
-  - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/TestsOptilib.java
-  - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/TestsControleur.java
-  - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/TestDoc.java
-  - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/MakeOPTIwebTest.java
+  - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/TestsOptilib.java
+  - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/TestsControleur.java
+  - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/TestDoc.java
+  - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/MakeOPTIwebTest.java
   
   - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
