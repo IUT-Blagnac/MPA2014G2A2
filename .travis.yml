@@ -11,7 +11,9 @@ script:
   
   - SRCDIR=./src/
   - BINDIR=./bin/
-
+  
+  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
+  
   - echo /***** Compilation du modele *****/
   
   - javac -d $BINDIR $SRCDIR/Modele/Sujets.java
@@ -52,6 +54,12 @@ script:
   - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/TestDoc.java
   - javac -cp .;$BINDIR;./tools/junit.jar;.;$SRCDIR -d $BINDIR $SRCDIR/Test/MakeOPTIwebTest.java
   
-  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
+  - echo /***** Génération doc *****/
+
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurImage.html srcdoc/docUtilisateurImage.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueImage.html srcdoc/docTechniqueImage.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
-  - ls -alF srcdoc
+  
+  - echo /***** Tests java *****/
+  
+  - echo /***** Tests casperjs *****/

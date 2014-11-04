@@ -1,36 +1,175 @@
-= MPA : Présentation finale de recette MPAstaff
-:Author:  DUT/INFO/M3301
-:lang: fr
+﻿= Documentation SPRINT3
+:Author:  Groupe projet 2A2
+:doctitle: Documentation Utilisateur du Projet OPTI au sprint4
 :slideshowlocation: Your computer
 :copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
-:duration: 30
-:incremental: 1
-
-== Premier transparent
-
-A vous ...
-
--  item 1
--  item 2
--  item 3
-
-NOTE: On compte en moyenne 3mn par transparent
-
-== Second transparent
-
-image:./images/diag0.png[]
-
-NOTE: Plus que 8 slides
+:revnumber: 0.23
 
 
-== Troisième transparent
+include::docConf.txt[]
 
-.HelloMonde.java
-----
-include::../src/HelloMonde.java[]
-----
+== Liste des membres
 
-== Perspectives
+- PERE Jean-Philippe
+- SANTACANA Nathan = Responsable du Bilan Financier
+- LOPEZ Nathan
+- ERB Alexandre
+- COLIGNON Benjamin
+- VERON Vimel
 
-image:./images/sieste.png[]
 
+ DUT INFO S3/Module MPA
+ 
+ 
+== Bilan fonctionnel du projet
+
+
+
+Notre application est capable de réaliser toutes les exigences du client , que ce soit via l'application web comme java.
+
+En effet l'application permet de : 
+
+- de gérer tous les acteurs intervenant dans les projets
+- de gérer l'affectation semi-automatique des projets aux groupes étudiants
+- de gérer la publication des informations destinées aux différents intervenants et aux progiciels institutionnels
+- de gérer l'évaluation de chaque projet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Bilan financier du projet
+
+.An example table
+[width="40%",frame="topbot",options="header,footer"]
+|=====================================================
+|Tâche	  |Dévelopeurs	|Nombre d'heures	|Coût
+|1        |Item 1		|					|
+|2        |Item 2		|					|
+|3        |Item 3		|					|
+|Total    |				|					|
+|=====================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Bilan technique du projet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Bilan humain du projet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Bilan global du projet
