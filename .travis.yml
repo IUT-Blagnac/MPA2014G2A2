@@ -64,7 +64,7 @@ script:
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   
   - echo /***** Tests java *****/
-  - tree ./
+
   - java -cp .:./$SRCDIR:./$SRCDIR/junit.jar $BINDIR/Test/TestsOptilib
   - java -cp .:./$SRCDIR:./$SRCDIR/junit.jar $BINDIR/Test/TestsControleur
   - java -cp .:./$SRCDIR:./$SRCDIR/junit.jar $BINDIR/Test/TestDoc
