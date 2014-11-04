@@ -48,10 +48,10 @@ script:
 
   - echo /***** Compilation des tests *****/
  
-  - javac -cp .:./$BINDIR;./tools/junit.jar;.:./$SRCDIR -d $BINDIR $SRCDIR/Test/TestsOptilib.java
-  - javac -cp .:./$BINDIR;./tools/junit.jar;.:./$SRCDIR -d $BINDIR $SRCDIR/Test/TestsControleur.java
-  - javac -cp .:./$BINDIR;./tools/junit.jar;.:./$SRCDIR -d $BINDIR $SRCDIR/Test/TestDoc.java
-  - javac -cp .:./$BINDIR;./tools/junit.jar;.:./$SRCDIR -d $BINDIR $SRCDIR/Test/MakeOPTIwebTest.java
+  - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestsOptilib.java
+  - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestsControleur.java
+  - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestDoc.java
+  - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/MakeOPTIwebTest.java
   
   - echo /***** Génération doc *****/
 
