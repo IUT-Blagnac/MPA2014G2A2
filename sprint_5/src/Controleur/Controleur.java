@@ -646,12 +646,12 @@ public class Controleur {
 		ArrayList<Voeux> listeDesVoeux = (ArrayList<Voeux>)listeVoeux.clone();
 		ArrayList<String> groupesSansSujet = new ArrayList<String>();
 		
-		/* On recupère tous les groupes */
+		/* On recupere tous les groupes */
 		for(int i=0;i<listeEtudiants.size();i++) {
 			tousLesGroupes.add(listeEtudiants.get(i).getDonnees().get("groupe"));
 		}
 		
-		/* On recupèe les groupes ayant deja un sujet et les sujets deja pris */
+		/* On recupee les groupes ayant deja un sujet et les sujets deja pris */
 		
 		for(int i=0;i<listeProjets.size();i++) {
 			groupesAvecSujet.add(listeProjets.get(i).getDonnees().get("groupe"));
