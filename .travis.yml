@@ -29,7 +29,7 @@ script:
   - set SRCDIR=./src/
   - set BINDIR=./bin/
 
-  - @echo /***** Compilation du modèle *****/
+  - echo /***** Compilation du modèle *****/
   
   - javac -d %BINDIR% %SRCDIR%/Modele/Sujets.java
   - javac -d %BINDIR% %SRCDIR%/Modele/Etudiants.java
@@ -56,13 +56,13 @@ script:
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/AffichageVoeux.java
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Interface/FenetrePrincipale.java
   
-  - @echo /***** Compilation du controleur *****/
+  - echo /***** Compilation du controleur *****/
   
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/Controleur.java
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/ComparateurDeVoeux.java
   - javac -cp .;%SRCDIR% -d %BINDIR% %SRCDIR%/Controleur/OptiMain.java
 
-  - @echo /***** Compilation des tests *****/
+  - echo /***** Compilation des tests *****/
  
   - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/TestsOptilib.java
   - javac -cp .;%BINDIR%;./tools/junit.jar;.;%SRCDIR% -d %BINDIR% %SRCDIR%/Test/TestsControleur.java
