@@ -45,6 +45,10 @@ script:
   
   - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/Controleur.java
   - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/Controleur/OptiMain.java
+  
+  - echo /***** Compilation dOptiWeb *****/
+  
+  - javac -cp .:./$SRCDIR -d $BINDIR $SRCDIR/OptiWeb/MakeOPTIweb.java
 
   - echo /***** Compilation des tests *****/
  

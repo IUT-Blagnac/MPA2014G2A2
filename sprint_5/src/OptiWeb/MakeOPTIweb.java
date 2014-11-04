@@ -119,7 +119,7 @@ public class MakeOPTIweb {
 				/* Contenu */
 				sortie_html.write("<div class=\"contenu\">\n");
 
-					sortie_html.write("<p>Cette application a ete realisee dans le cadre du module M3301/MPA du DUT Informatique à l'IUT de Blagnac.</p>\n");
+					sortie_html.write("<p>Cette application a ete realisee dans le cadre du module M3301/MPA du DUT Informatique a l'IUT de Blagnac.</p>\n");
 				
 					sortie_html.write(
 							"<ul class=\"liste2\">\n" +
@@ -132,7 +132,7 @@ public class MakeOPTIweb {
 					sortie_html.write(
 							"<ul class=\"liste2\">\n" +
 							"<li class=\"liste_titre\">Membres du groupe</li>\n" +
-							"<li>LOPEZ Nathan <i>Developpeur suprème & chef de projet</i></li>\n" +
+							"<li>LOPEZ Nathan <i>Developpeur supreme & chef de projet</i></li>\n" +
 							"<li>ERB Alexandre <i>Doc'eur en herbe</i></li>\n" +
 							"<li>SANTACANA Nathan <i>Expert en test</i></li>\n" +
 							"<li>COLLIGNON Benjamin <i>Interfaceur graphique</i></li>\n" +
@@ -146,7 +146,7 @@ public class MakeOPTIweb {
 							"<li class=\"liste_titre\">Propulse par</li>\n" +
 							"<li>Nathan LOPEZ's brain</li>\n" +
 							"<li>NEVER Jquery</li>\n" +
-							"<li>Notre application contient 34161 caractères, la même application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus legère. Notre application ne necessite pas de connexion internet.</li>\n" +
+							"<li>Notre application contient 34161 caracteres, la même application utilisant JQuery en fait 544917, la notre est donc 15,9 fois plus legere. Notre application ne necessite pas de connexion internet.</li>\n" +
 							"</ul>\n"
 							);
 				
