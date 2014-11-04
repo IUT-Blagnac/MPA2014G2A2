@@ -247,7 +247,7 @@ public class Controleur {
 		return Etudiants.getAttributs();
 	}
 	
-	/* Trouve un etudiant ‡ partir d'un mot clef et d'un attribut */
+	/* Trouve un etudiant a partir d'un mot clef et d'un attribut */
 	public static ArrayList<Etudiants> searchEtudiant(String attribut, String valeur) {
 		ArrayList<Etudiants> resultat = new ArrayList<Etudiants>();
 		
@@ -288,7 +288,7 @@ public class Controleur {
 		i.setDonnees(donnees);
 	}
 
-	/* Trouve un intervenant ‡ partir d'un mot clef et d'un attribut */
+	/* Trouve un intervenant a partir d'un mot clef et d'un attribut */
 	public static ArrayList<Intervenants> searchIntervenant(String attribut, String valeur) {
 		ArrayList<Intervenants> resultat = new ArrayList<Intervenants>();
 		
@@ -300,7 +300,7 @@ public class Controleur {
 		return resultat;
 	}
 
-	/* Trouve un intervenant ‡ partir de son id */
+	/* Trouve un intervenant a partir de son id */
 	public static Intervenants findIntervenant(String id) {
 		for(int i=0;i<listeIntervenants.size();i++) {
 			if(listeIntervenants.get(i).getDonnees().get("id").equals(id)) {
@@ -391,7 +391,7 @@ public class Controleur {
 		s.setDonnees(donnees);
 	}
 	
-	/* Trouve un sujet ‡ partir de son id */
+	/* Trouve un sujet a partir de son id */
 	public static Sujets findSujet(String id) {
 		for(int i=0;i<listeSujets.size();i++) {
 			if(listeSujets.get(i).getDonnees().get("id").equals(id)) {
@@ -401,7 +401,7 @@ public class Controleur {
 		return null;
 	}
 	
-	/* Trouve un sujet ‡ partir d'un mot clef et d'un attribut */
+	/* Trouve un sujet a partir d'un mot clef et d'un attribut */
 	public static ArrayList<Sujets> searchSujet(String attribut, String valeur) {
 		ArrayList<Sujets> resultat = new ArrayList<Sujets>();
 		
@@ -441,7 +441,7 @@ public class Controleur {
 		return listeProjets;
 	}
 	
-	/* Trouve un projet ‡ partir de son id */
+	/* Trouve un projet a partir de son id */
 	public static Projets findProjet(String id) {
 		for(int i=0;i<listeProjets.size();i++) {
 			if(listeProjets.get(i).getDonnees().get("id").equals(id)) {
@@ -484,7 +484,7 @@ public class Controleur {
 		p.setDonnees(donnees);
 	}
 	
-	/* Trouve un projet ‡ partir d'un mot clef et d'un attribut */
+	/* Trouve un projet a partir d'un mot clef et d'un attribut */
 	public static ArrayList<Projets> searchProjet(String attribut, String valeur) {
 		ArrayList<Projets> resultat = new ArrayList<Projets>();
 		
@@ -511,13 +511,13 @@ public class Controleur {
 	/* Renvoie la liste des groupes avec leur sujet */
 	public static String[][] getGroupes() {
 		ArrayList<String> groupesTemp = new ArrayList<String>();
-		String dej‡Present = "";
+		String dejaPresent = "";
 		
 		for(int i=0;i<listeEtudiants.size();i++) {
 			String groupe = listeEtudiants.get(i).getDonnees().get("groupe");
 			
-			if(!dej‡Present.contains("#" + groupe + "#")) {
-				dej‡Present += "#" + groupe + "#";
+			if(!dejaPresent.contains("#" + groupe + "#")) {
+				dejaPresent += "#" + groupe + "#";
 				groupesTemp.add(groupe);
 			}
 		}
@@ -651,7 +651,7 @@ public class Controleur {
 			tousLesGroupes.add(listeEtudiants.get(i).getDonnees().get("groupe"));
 		}
 		
-		/* On recupËe les groupes ayant dej‡ un sujet et les sujets dej‡ pris */
+		/* On recupËe les groupes ayant deja un sujet et les sujets deja pris */
 		
 		for(int i=0;i<listeProjets.size();i++) {
 			groupesAvecSujet.add(listeProjets.get(i).getDonnees().get("groupe"));
