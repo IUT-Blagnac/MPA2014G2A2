@@ -65,10 +65,12 @@ script:
   
   - echo /***** Tests java *****/
 
-  - java -cp .:./$SRCDIR/junit.jar $BINDIR/Test/TestsOptilib
-  - java -cp .:./$SRCDIR/junit.jar $BINDIR/Test/TestsControleur
-  - java -cp .:./$SRCDIR/junit.jar $BINDIR/Test/TestDoc
-  - java -cp .:./$SRCDIR/junit.jar $BINDIR/Test/MakeOPTIwebTest
+  - cd $BINDIR
+  
+  - java -cp .:../$SRCDIR/junit.jar Test/TestsOptilib
+  - java -cp .:../$SRCDIR/junit.jar Test/TestsControleur
+  - java -cp .:../$SRCDIR/junit.jar Test/TestDoc
+  - java -cp .:../$SRCDIR/junit.jar Test/MakeOPTIwebTest
   
   - echo /***** MakeOPTIweb *****/
   
