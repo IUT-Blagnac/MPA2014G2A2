@@ -54,7 +54,6 @@ script:
  
   - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestsOptilib.java
   - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestsControleur.java
-  - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/TestDoc.java
   - javac -cp .:./$SRCDIR:./$SRCDIR/junit.jar -d $BINDIR $SRCDIR/Test/MakeOPTIwebTest.java
   
   - echo /***** Génération doc *****/
@@ -69,11 +68,11 @@ script:
   
   - java -cp .:../$SRCDIR/junit.jar Test/TestsOptilib
   - java -cp .:../$SRCDIR/junit.jar Test/TestsControleur
-  - java -cp .:../$SRCDIR/junit.jar Test/TestDoc
   - java -cp .:../$SRCDIR/junit.jar Test/MakeOPTIwebTest
   
   - echo /***** MakeOPTIweb *****/
   
+  - cd ../
   - java -cp .:./$SRCDIR $BINDIR/OptiWeb/MakeOPTIweb
   
   - echo /***** Tests casperjs *****/
