@@ -72,11 +72,9 @@ script:
   
   - echo /***** MakeOPTIweb *****/
   
-  - ls ./
-  - ls ./OptiWeb
   - java -cp ./ OptiWeb/MakeOPTIweb
   
   - echo /***** Tests casperjs *****/
   
-  - cd ./OPTIweb
+  - cd ../OPTIweb
   - casperjs test casperAccueil.js
