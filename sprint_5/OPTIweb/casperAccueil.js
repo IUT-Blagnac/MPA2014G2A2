@@ -34,7 +34,7 @@ casper.start(APP_URL, function() {
     this.test.assertTitle(expected, 'title = "'+expected+'"');
 });
 
-// récupération des paramètres éventuels de la ligne de commande
+// recuperation des parametres eventuels de la ligne de commande
 casper.then(function() {
   CAPTURE = this.cli.get('capture') || CAPTURE ;
   this.test.comment('CAPTURE = '+CAPTURE);
@@ -50,8 +50,8 @@ casper.then(function(){
     if ( CAPTURE ) { this.capture(REP_CAPTURE+"accueil"+RESOLUTION+".png"); }
     this.test.comment('');
     this.test.comment('Contenu de #accueil header');
-    this.test.assertSelectorHasText('#accueil div a', 'Crédits');
-    var expected = '\nP<span class="landscape">rojets </span>tut<span class="landscape">orés</span> 2014-2015<br>Département INFO<span class="landscape">RMATIQUE</span><br>IUT de Blagnac';
+    this.test.assertSelectorHasText('#accueil div a', 'Credits');
+    var expected = '\nP<span class="landscape">rojets </span>tut<span class="landscape">ores</span> 2014-2015<br>Departement INFO<span class="landscape">RMATIQUE</span><br>IUT de Blagnac';
     var h1 = this.getHTML('#accueil h1');
     this.test.assertEquals(h1,expected,'h1 = "'+expected+'"');
     this.test.comment('');
