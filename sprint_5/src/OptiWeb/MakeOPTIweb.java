@@ -28,7 +28,7 @@ public class MakeOPTIweb {
 		
 		Controleur.importer();
 		
-		String adresse_fichier = "OPTIweb.html";
+		String adresse_fichier = "../../OPTIweb.html";
 		String adresse_javascript = "javascript.js";
 		String adresse_css = "style.css";
 		
