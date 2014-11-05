@@ -73,7 +73,7 @@ script:
   - echo /***** MakeOPTIweb *****/
   
   - cd ../
-  - java -cp .:./$SRCDIR $BINDIR/OptiWeb/MakeOPTIweb
+  - java -cp .:./$BINDIR $BINDIR/OptiWeb/MakeOPTIweb
   
   - echo /***** Tests casperjs *****/
   
