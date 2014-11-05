@@ -82,6 +82,4 @@ script:
   - echo /***** Tests casperjs *****/
   
   - cd ../OPTIweb
-  - ls
-  - ls ../
   - casperjs test casperAccueil.js
