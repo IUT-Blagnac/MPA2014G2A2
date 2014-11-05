@@ -72,8 +72,8 @@ script:
   
   - echo /***** MakeOPTIweb *****/
   
-  - cd ../
-  - java -cp .:./$BINDIR $BINDIR/OptiWeb/MakeOPTIweb
+  - ls ./
+  - java -cp . OptiWeb/MakeOPTIweb
   
   - echo /***** Tests casperjs *****/
   
