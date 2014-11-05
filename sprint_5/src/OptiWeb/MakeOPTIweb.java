@@ -29,8 +29,8 @@ public class MakeOPTIweb {
 		Controleur.importer();
 		
 		String adresse_fichier = "../../OPTIweb.html";
-		String adresse_javascript = "javascript.js";
-		String adresse_css = "style.css";
+		String adresse_javascript = "../../javascript.js";
+		String adresse_css = "../../style.css";
 		
 		String titre = "P<span class=\"landscape\">rojets </span>tut<span class=\"landscape\">ores</span> 2014-2015<br/>Departement INFO<span class=\"landscape\">RMATIQUE</span><br/>IUT de Blagnac";
 		String version = "0.1";
